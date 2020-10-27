@@ -11,9 +11,9 @@ int main()
     int sub = x - z -90;
 
     /*Print option*/
+    cout << "\n\tTotal sum  = " << sum << endl;
 
-    cout << "\n\tTotal sum  = " << sum ;
-    cout <<"\n\tTotal sub = " << sub ;
+    cout <<"\n\tTotal sub = " << sub << endl;
 
     return 0 ;
 }
