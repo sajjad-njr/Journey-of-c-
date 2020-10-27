@@ -28,6 +28,7 @@ int main()
 
     int vag = x / y ;
 
+    int reminder = x % y ;
 
     /*Print option*/
 
@@ -38,6 +39,9 @@ int main()
     cout <<"Total  mul = " <<  mul << endl;
 
     cout << "Total  vag  = " <<  vag << endl;
+
+     cout << "Total reminder  = " <<  reminder << endl;
+
 
     return 0 ;
 }
