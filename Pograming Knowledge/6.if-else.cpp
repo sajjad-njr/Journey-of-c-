@@ -5,19 +5,22 @@ using namespace std ;
 int main()
 {
     int age ;
-    //int height ;
+    int height ;
 
     cout<<"Enter your  age : " <<endl;
     cin >> age ;
 
-    if(age == 20 || age > 20)
+    cout<<"Enter your  Height  : " <<endl;
+    cin >>  height ;
+
+    if(age >= 20  && height == 100)
     {
-        cout<<"Your  agae is right " << endl;
+        cout<<"\tYour  age and height is right " << endl;
     }
 
     else
     {
-         cout<<"Y our  age is  Wrong " << endl;
+         cout<<"\tYour  age and height is wrong " << endl;
     }
 
     return 0 ;
