@@ -12,8 +12,8 @@ int main()
 {
     int x , y , z ;
 
-    //cin >> x ;
-    //cin >> y ;
+    cin >> x ;
+    cin >> y ;
 
     //z = mul(x,y);
     //cout << mul();
