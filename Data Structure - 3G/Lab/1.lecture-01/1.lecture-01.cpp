@@ -1,4 +1,6 @@
 #include<iostream>  //prepocesor directive
+#include<string>
+
 
 using namespace std ; //using declaration
 
@@ -9,5 +11,10 @@ int main()
 
     cout << x << endl;
 
+    getchar();
+    string str ;
+
+    getline(cin, str) ;
+    cout << str ;
     return 0 ;
 }
