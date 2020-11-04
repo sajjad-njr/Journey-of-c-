@@ -1,16 +1,14 @@
 #include<iostream>
 
 using namespace std ;
-
-int main()
+int  main()
 {
-    int b , h ;
+     float base , height , area ;
 
-    cin >> b >> h ;
+    cout << " Enter the value of Base and Height = " ;
+    cin >> base >> height ;
 
-    float area = ( b * h) / 2 ;
+     area = ( base * height) / 2 ;
 
-    cout << " Area " << area ;
-
-    return 0 ;
+    cout << "\tArea = " << area ;
 }
