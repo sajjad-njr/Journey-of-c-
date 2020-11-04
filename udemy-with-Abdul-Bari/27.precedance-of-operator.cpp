@@ -8,7 +8,9 @@ int main()
 
     int c ;
 
-    c = a + b * 3 - 1 + a;
+    //c = a + b * 3 - 1 + a;
+
+    c = (a + b ) * 3 - 1 + a; // the deference between first bracket
 
     cout << c ;
 
