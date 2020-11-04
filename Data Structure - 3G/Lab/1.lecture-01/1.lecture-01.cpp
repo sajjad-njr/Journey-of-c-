@@ -6,15 +6,17 @@ using namespace std ; //using declaration
 
 int main()
 {
-    int x ;
-    cin >> x ;
+    //int x ;
+    //cin >> x ;
 
-    cout << x << endl;
+    //cout << x << endl;
 
-    getchar();
-    string str ;
+     // getcahr()
+    //string str ;
 
-    getline(cin, str) ;
-    cout << str ;
+    //getline(cin, str) ;
+   // cout <<str.size()<<endl;
+   // cout << str ;
+
     return 0 ;
 }
