@@ -10,53 +10,53 @@ int main()
 
     if(num == 1)
     {
-        cout << " The day is Sunday" << endl;
+        cout << " The  Month is  January" << endl;
     }
 
     else if(num == 2)
     {
-        cout << " The day is  Monday " << endl;
+        cout << " The  Month is   February " << endl;
     }
     else if(num == 3)
     {
-        cout << " The day is  Tuesday" << endl;
+        cout << " The  Month is   March" << endl;
     }
     else if(num == 4)
     {
-        cout << " The day is  Wednesday" << endl;
+        cout << " The  Month is   April" << endl;
     }
     else if(num == 5)
     {
-        cout << " The day is  Thursday" << endl;
+        cout << " The  Month is   May" << endl;
     }
     else if(num == 6)
     {
-        cout << " The day is Friday" << endl;
+        cout << " The  Month is  June" << endl;
     }
     else if(num == 7)
     {
-        cout << " The day is  Saturday" << endl;
+        cout << " The  Month is July" << endl;
     }
 
    else if(num == 8)
     {
-        cout << " The day is  Wednesday" << endl;
+        cout << " The  Month is August" << endl;
     }
     else if(num == 9)
     {
-        cout << " The day is  Thursday" << endl;
+        cout << " The  Month is September" << endl;
     }
     else if(num == 10)
     {
-        cout << " The day is Friday" << endl;
+        cout << " The  Month is October" << endl;
     }
     else if(num == 11)
     {
-        cout << " The day is  Saturday" << endl;
+        cout << " The  Month is November" << endl;
     }
      else if(num == 12)
     {
-        cout << " The day is  Saturday" << endl;
+        cout << " The Month is  December" << endl;
     }
     else
     {
