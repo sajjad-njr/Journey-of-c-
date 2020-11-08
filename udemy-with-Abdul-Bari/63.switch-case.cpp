@@ -21,9 +21,12 @@ int main()
         {
         case 1:
             cout << " Weeks are only 7 days " << endl;
+            break ;
 
         case 2 :
             cout << "MOnth are 30 days " ;
+              break ;
+
         default :
             cout << " No problem " ;
         }
