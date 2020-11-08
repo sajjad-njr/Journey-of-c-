@@ -1,23 +1,15 @@
 #include<iostream>
 using namespace std ;
 
-
-float marks(int m1, int m2, int m3)
-{
-    float avg =  (m1 + m2 + m3) / 3 ;
-
-    return avg ;
-}
-
 int main()
 {
     int a , b, c ;
 
-    a = 70;
-    b = 90 ;
+    a = 75;
+    b = 91 ;
     c = 99 ;
 
-    float totalCgpa = marks(a,b,c);
+    float  totalCgpa = ( a + b + c) / 3 ;
 
     cout << "Total CGPA = " << totalCgpa << endl;
 
@@ -38,3 +30,4 @@ int main()
 
     return 0 ;
 }
+
