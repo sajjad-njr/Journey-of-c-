@@ -14,6 +14,8 @@ int main()
         n--;
     }
     */
+    /* do while loop */
+    /*
     do
     {
        cout << " Sajjad ";
@@ -21,6 +23,12 @@ int main()
        i++ ;
     }
     while(i < 10);
+*/
+
+    for( i = 1 ; i < 10 ; i++)
+    {
+        cout << " Hello Bai\n";
+    }
 
     return 0 ;
 }
