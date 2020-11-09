@@ -10,7 +10,7 @@ int main()
 
     for( i = 1 ; i <= 10 ; i++)
     {
-        cout <<"\t" <<  n << " * " << i << "  =  " << n * i << endl;
+        cout <<"\t" <<  n << " * " << i << " = " << n * i << endl;
     }
 
     return 0 ;
