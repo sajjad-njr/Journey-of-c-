@@ -5,11 +5,13 @@ int main()
 {
     int i, m, n = 5 , fact = 1;
 
+
     for(i = 1 ; i <= n ; i++)
     {
-        m =   fact * i  ;
+        fact =   fact * i  ;
     }
-    cout << m ;
+
+    cout << fact ;
 
     return 0 ;
 }
