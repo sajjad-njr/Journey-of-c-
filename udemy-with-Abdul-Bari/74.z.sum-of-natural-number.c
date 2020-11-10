@@ -13,7 +13,7 @@ int main()
         cout << sum << " " << sum << "+" << i << endl;
 
         sum = sum + i ;
-        i++;
+
     }
 
     cout << "\n\nTotal Natural number sum = " << sum << endl;
