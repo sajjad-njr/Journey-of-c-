@@ -9,6 +9,8 @@ int main()
     cout << " Enter a number : ";
     cin >> number ;
 
+    // key : number % i == o
+
     for( i = 1 ; i <= number ; i++)
     {
         if(number % i == 0)
