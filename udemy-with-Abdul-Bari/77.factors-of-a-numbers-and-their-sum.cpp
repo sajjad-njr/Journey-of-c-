@@ -7,7 +7,7 @@ using namespace std ;
 
 int main()
 {
-    int number , i ;
+    int number, i ;
     int sum(0);
     cout << " Enter a number : ";
     cin >> number ;
@@ -23,5 +23,13 @@ int main()
         }
     }
     cout<<"\n\nThe sum of all factors = " << sum << endl;
+
+    //Perfect number change
+
+    if ( 2 * number == sum)
+        cout << "\n\tThe number is perfect" << endl;
+    else
+        cout<<"\n\tThe number is not  perfect" << endl;
+
     return 0 ;
 }
