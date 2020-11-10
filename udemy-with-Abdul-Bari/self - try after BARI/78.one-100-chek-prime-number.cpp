@@ -5,36 +5,36 @@ using namespace std;
 
 int main()
 {
-    int number, i, count = 0 ;
+    int i, repit = 0;
 
     //cout << "\n\tEnter a number : " ;
     //cin >> number ;
 
-    for( i = 1 ; i <= 100 ; i++)
+    for( i = 1 ; i <=  7 ; i++)
     {
-
-        if(  100 % i == 0)
+        if(7 % i == 0)
         {
-            count++;
+            //cout << repit ;
 
+            repit++;
+        }
+    }
+
+    for( i = 1 ; i <=  7 ; i++)
+    {
+        if( repit == 2)
+        {
+            cout << "This is prime " << endl;
+        }
+        else
+        {
+            cout << "This is not prime " << endl;
         }
 
-}
+    }
+    //cout << repit ;
+    //cout << i << " This is prime" << endl;
 
-    /*
-        for( i = 1 ; i <= 100 ; i++)
-        {
-            if (count == 2)
-            {
-                cout << i << "    This is Prime number : " << endl;
-            }
-            else
-            {
-                cout << i << "    This is not Prime number : " << endl;
-            }
-
-        }
-    */
     return 0 ;
 }
 
