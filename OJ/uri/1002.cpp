@@ -1,15 +1,16 @@
 #include<iostream>
+#include<iomanip>
 
 using namespace std ;
-#define n 3.14159
 
 int main()
 {
-     double R;
-     cin >> R ;
-     long double A = n * (R*R );
+    double n=3.14159,A=0,R;
 
-     cout <<"A="<<A<<endl;
-     return 0 ;
+    cin >>R ;
+    A = n *(R*R );
+
+    cout <<"A="<<fixed<<setprecision(4)<<A<<endl;
+    return 0 ;
 }
 
