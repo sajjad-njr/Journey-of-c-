@@ -14,7 +14,6 @@ int main()
         num = num / 10 ;
 
         rev = rev * 10 + rem ;
-
     }
 
     cout << " Rem = " << rem ;
