@@ -4,9 +4,9 @@ using namespace std ;
 
 int main()
 {
-    int arr[] = {45,67,89,43,23};
+      float arr[] = {45.4f,67.8f,89.3f,43.09f,23.99f};
 
-    for(int x:arr)
+    for(float x:arr)
         cout << x <<endl;
 
 
