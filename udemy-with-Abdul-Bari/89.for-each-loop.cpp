@@ -12,7 +12,15 @@ int main()
         cout << " " <<Ar[i];
     }
     */
+   /*
     for(int x : Ar)
+    {
+        cout << " " << x ;
+    }
+    */
+
+   // when you do not know the data type you can use AUTO keyword
+    for(auto x : Ar)
     {
         cout << " " << x ;
     }
