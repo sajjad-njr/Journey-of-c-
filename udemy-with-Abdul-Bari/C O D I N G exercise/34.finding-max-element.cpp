@@ -13,9 +13,7 @@ void Max(int a[])
         {
             max = a[i];
         }
-
     }
-
     cout << "Max is = " << max ;
 }
 
