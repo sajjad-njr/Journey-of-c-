@@ -24,8 +24,11 @@ int main()
     {
         for(j = 0 ; j < n ; j++)
         {
-            cout << i << "and " << j << "value insert = " ;
-            cout<<a[i][j];
+            //cout << i << "and " << j << "value insert = " ;
+            cout<< " " << a[i][j];
+            //cout << endl;
+            cout<< " " << b[i][j];
+
         }
         cout<<endl;
     }
