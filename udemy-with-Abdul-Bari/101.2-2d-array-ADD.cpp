@@ -19,6 +19,32 @@ int main()
             cin >>a[i][j] >> b[i][j];
         }
     }
+
+//a and b show array
+
+cout<<endl<<"\tNew A array : " << endl;
+
+for(i = 0 ; i < m ; i++)
+    {
+        for(j = 0 ; j < n ; j++)
+        {
+             cout  << " " << a[i][j];
+        }
+        cout << endl;
+    }
+cout<<endl<<"\tNew B array : " << endl;
+
+for(i = 0 ; i < m ; i++)
+    {
+        for(j = 0 ; j < n ; j++)
+        {
+             cout << " " << b[i][j];
+        }
+        cout << endl;
+    }
+
+
+
 //adding part
 
     for(i = 0 ; i < m ; i++)
@@ -34,7 +60,7 @@ int main()
 
         }
     }
-
+//out put
     for(i = 0 ; i < m ; i++)
     {
         for(j = 0 ; j < n ; j++)
