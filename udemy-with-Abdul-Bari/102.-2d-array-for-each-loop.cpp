@@ -4,11 +4,20 @@ int main()
 {
     int a[2][3];
 
-    for(auto x:a)
+    for(auto& x : a)
     {
-        for(auto y:x)
+        for(auto& y:x)
         {
-            cin >>y;
+            cin >> y;
         }
+    }
+
+    for(auto& x : a)
+    {
+        for(auto& y : x)
+        {
+            cout << y << " ";
+        }
+        cout << endl;
     }
 }
