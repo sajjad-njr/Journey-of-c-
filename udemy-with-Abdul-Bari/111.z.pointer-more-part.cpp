@@ -9,7 +9,8 @@ int main()
 
     int *p = a;
     //p++;
-    p--;
+    //p--;
+    p = p + 2 ;
     cout << *p;
     return 0;
 }
