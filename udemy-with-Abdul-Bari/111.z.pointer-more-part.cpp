@@ -9,6 +9,7 @@ int main()
 
     int *p = a;
     //p++;
+    p--;
     cout << *p;
     return 0;
 }
