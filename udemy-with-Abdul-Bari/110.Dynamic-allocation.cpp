@@ -9,7 +9,7 @@ int main()
 
     int a[size] ;
 
-    cout << sizeof a << endl;
+    cout << " size = " << sizeof a << endl;
 
     return 0;
 }
