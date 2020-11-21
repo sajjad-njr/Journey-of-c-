@@ -8,7 +8,7 @@ int main()
     int b[5] = {22,34,56,78,90};
 
     int *q = &a[2];
-    int *p = &b[4];
+    int *p = &a[4];
 
     int d = q  - p ;
 
