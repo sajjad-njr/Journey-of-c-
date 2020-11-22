@@ -13,7 +13,8 @@ int main()
 */
     for(int i = 0 ; i < 7; i++)
     {
-        cout << A + i << endl;
+        //cout << A + i << endl;
+        cout << *(p+i)<< endl;
 
        // alternative work
        //cout << i[A] << endl;
