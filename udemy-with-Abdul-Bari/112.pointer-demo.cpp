@@ -13,6 +13,10 @@ int main()
 */
     for(int i = 0 ; i < 7; i++)
     {
+       // alternative work
+       //cout << i[A] << endl;
+
+       // general form
        // cout << A[i] << endl;
     }
 
