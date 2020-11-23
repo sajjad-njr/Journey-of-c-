@@ -20,11 +20,11 @@ int main()
     }
     else if(a == 4)
     {
-        cout << "Total: R$ " <<fixed << setprecision(2) << 5.00 * m <<endl;
+        cout << "Total: R$ " <<fixed << setprecision(2) << 2.00 * m <<endl;
     }
     else if(a == 5)
     {
-         cout  << "Total: R$ " << fixed << setprecision(2) << 1.00 * m <<endl;
+         cout  << "Total: R$ " << fixed << setprecision(2) << 1.50 * m <<endl;
     }
     else
         return 0;
