@@ -2,12 +2,14 @@
 using namespace std;
 int main()
 {
-    int T , N ;
-    cin>>T>>N;
+    int T , N , sum = 0 ;
+    cin>>T >> N;
 
-    for(int i = 0 ; i < T ; i++)
-    {
-        cout << "sajjad" << endl;
-    }
+
+
+
+
+
+    cout << sum << endl;
     return 0;
 }
