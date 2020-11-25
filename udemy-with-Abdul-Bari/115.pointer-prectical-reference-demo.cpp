@@ -10,6 +10,11 @@ int main()
     x++;
 
     cout << "X = " << x << endl;
+    /*
+    int b = 20 ;
 
+    &y = b;
+    */  //declare aging that why not work it
+    cout << "B = " << b << endl;
     return 0;
 }
