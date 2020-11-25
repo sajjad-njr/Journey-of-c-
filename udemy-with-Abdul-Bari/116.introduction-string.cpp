@@ -1,10 +1,14 @@
-
 #include<iostream>
 using namespace std;
 
 int main()
 {
-    char s[10] = "hello";
+    // 1st step
+    //char s[10] = "hello";
+
+
+    char s[] = "hello";
+
 
     cout << s << endl;
 
