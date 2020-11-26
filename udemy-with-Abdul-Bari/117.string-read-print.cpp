@@ -11,10 +11,17 @@ int main()
     */
 
     // double name print
-    char s[20];
+     char s[20];
+      char s2[20];
     cout <<"Enter your name : ";
     cin.get(s,20);
     cout << s ;
 
+    cout <<"Enter your name : ";
+    cin.get(s2,20);
+    cout << s2 ;
+
+
+//the deference between get line
     return 0;
 }
