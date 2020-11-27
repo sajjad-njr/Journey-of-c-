@@ -5,13 +5,9 @@ int main()
 {
     int i,t, A, B, C ;
     cin >> t;
-
-
     for( i = 0 ; i < t ; i++)
     {
         cin >> A >> B >> C ;
-
-
         if(A > B &&  A > C)
         {
             if( B > C)
@@ -22,9 +18,7 @@ int main()
             {
                 cout << C << endl;
             }
-
         }
-
 
         else if(B > A  &&  B > C)
         {
