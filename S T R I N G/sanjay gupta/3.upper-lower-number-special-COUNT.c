@@ -2,7 +2,7 @@
 
 void main()
 {
-    int i, CountUp = 0 , CountLow = 0, CountNum = 0, CountSp = 0 ;
+    int i, CountUp = 0, CountLow = 0, CountNum = 0, CountSp = 0 ;
     char str[100];
 
     printf("\nEnter a line with mix : ");
@@ -18,7 +18,6 @@ void main()
             CountNum++;
         else
             CountSp++;
-
     }
 
     printf("\nUpper Latter = %d",CountUp);
