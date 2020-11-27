@@ -1,14 +1,22 @@
 #include<stdio.h>
 
-int main()
+void main()
 {
     char str[100];
-    int i ;
-    int ch = 0 , space = 0;
 
+    int i, ch = 0, space = 0;
 
-    for(i = 0 ; str[i] != 0 ; i++)
+    printf("\nEnter a line = ");
+    gets(str);
+
+    for(i = 0 ; str[i] != '\0'; i++)
     {
-        if()
+        ch++;
+
+        if(str[i] == ' ' )
+            space++;
     }
+
+    printf("\nTotal Character : %d",ch);
+    printf("\nTotal Words : %d",space+1);
 }
