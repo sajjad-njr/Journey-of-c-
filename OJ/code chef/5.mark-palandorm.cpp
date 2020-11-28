@@ -18,6 +18,9 @@ int main()
         }
         if ( m == rev)
             cout << "right" << endl;
+        else
+            cout << "Loss"<< endl;
+
     }
     return 0;
 }
