@@ -3,17 +3,21 @@ using namespace std ;
 
 int main()
 {
-    int n , rev = 0 , rem = 0;
-    cin >> n ;
-
-    while(n > 0)
+    int i, n, rev = 0, rem = 0, m;
+    int s;
+    cin >> s ;
+    for(i =0 ; i < s ; i++)
     {
-         rem= n%10;
-        n = n / 10;
-        rev = rev * 10 + rem;
+        cin >> n ;
+        m = n ;
+        while(n > 0)
+        {
+            rem= n%10;
+            n = n / 10;
+            rev = rev * 10 + rem;
+        }
+        if ( m == rev)
+            cout << "right" << endl;
     }
-
-    //cout << rev << endl;
-
     return 0;
 }
