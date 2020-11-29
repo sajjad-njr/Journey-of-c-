@@ -17,6 +17,7 @@ int main()
         if(ar[i] == search)
         {
             flag++;
+            printf("\n\t %d Data is found  %d  at location ",search,i+1);
         }
     }
 
