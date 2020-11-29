@@ -1,17 +1,28 @@
 #include<stdio.h>
 int main()
 {
-    int ar[20], i ;
+    int ar[5], i ;
 
     for(i = 0 ; i < 5 ; i++)
     {
         scanf("%d",&ar[i]);
     }
-    int search , flag = 0 ;
+    int search, flag = 0 ;
+    printf("\n\tEnter what you want =  ");
+
+    scanf("%d",&search);
 
     for(i = 0 ; i < 5 ; i++)
     {
-        printf("%d",ar[i]);
+        if(ar[i] == search)
+        {
+            flag++;
+        }
     }
+
+    if(flag == 0)
+        printf("\n\tData is not found =  ");
+    else
+        printf("\n\t %d Data is found  %d times",search,flag);
     return 0;
 }
