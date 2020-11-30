@@ -8,7 +8,7 @@ void Sc(int a[], int n)
     for(i = 0 ; i < n - 1 ; i++)
     {
         indexMin = i;
-        for(j = 0 ; j < n ; j++)
+        for(j = i + 1; j < n ; j++)
         {
             if(a[j] < a[indexMin])
                 indexMin = j;
@@ -22,4 +22,17 @@ void Sc(int a[], int n)
             a[indexMin] = temp;
         }
     }
+}
+
+int main()
+{
+    int a[4] = { 6, 5, 3, 2};
+
+    Sc(a,4);
+
+     for(int i = 0 ; i < 4 ; i++)
+    {
+        cout << a[i] << " ";
+    }
+    return 0;
 }
