@@ -18,3 +18,15 @@ void SelelectionSort(int a[], int n )
 
     }
 }
+
+int main()
+{
+    int b[6] = {34,36,1,9,3,2};
+    SelelectionSort(b,6);
+
+    for(int i = 0 ; i < 6 ; i++)
+    {
+        cout << b[i] << " ";
+    }
+     return 0;
+}
