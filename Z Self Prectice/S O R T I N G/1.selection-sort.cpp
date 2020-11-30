@@ -9,8 +9,12 @@ void SelelectionSort(int a[], int n )
 
         for(int j = 0 ; j < n ; j++)
         {
-
+            if(a[j] < a[imin])
+                imin = j ;
         }
+        int temp = a[i];
+        a[i] = a[imin];
+        a[imin] = temp;
 
     }
 }
