@@ -10,7 +10,16 @@ void Sc(int a[], int n)
         indexMin = i;
         for(j = 0 ; j < n ; j++)
         {
+            if(a[j] < a[indexMin])
+                indexMin = j;
 
+        }
+
+        if(indexMin != i)
+        {
+            temp = a[i];
+            a[i] = a[indexMin];
+            a[indexMin] = temp;
         }
     }
 }
