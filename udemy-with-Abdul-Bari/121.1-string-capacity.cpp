@@ -3,10 +3,10 @@ using namespace std;
 
 int main()
 {
-    string str = "Hello world  ";
+    string str = "Hello";
 
-
-    //cout << str.capacity() << endl;
+    //cout << str.size() << endl;
+    cout << str.capacity() << endl;
 
     return 0;
 }
