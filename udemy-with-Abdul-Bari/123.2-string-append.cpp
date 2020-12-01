@@ -10,8 +10,8 @@ int main()
     cout << str << endl;
 
     // how change capacity
-    string str1 = "sandajiiiiiiiiiiiida";
-
+    string str1 = "san who is my best friend but she is more talent than me ";
+     cout << str1 << endl;
     cout << str1.capacity() << endl;
     return 0;
 }
