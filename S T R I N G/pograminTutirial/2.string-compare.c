@@ -14,6 +14,27 @@ int main()
     len1 = strlen(a);
     len1 = strlen(a);
 
-    printf("\n\tLen = %d",len1);
+    if(len1 == len2)
+    {
+        while (i < len1)
+        {
+            if(a[i] == b[i])
+            {
+                i++;
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+    if(i == len1)
+    {
+        same = 1 ;
+        printf("\n\tThe strings are same");
+    }
+
+
+    //printf("\n\tLen = %d",len1);
     return 0;
 }
