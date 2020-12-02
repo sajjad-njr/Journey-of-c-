@@ -7,6 +7,8 @@ int main()
 
     printf("\n\tEnter string 1 : ");
     gets(a);
+    printf("\n\tEnter string 1 : ");
+    gets(b);
 
 
     return 0;
