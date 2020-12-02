@@ -8,12 +8,17 @@ int main()
     gets(a);
     gets(b);
 
-    for(i = 0 ; i a[i] != '\0' || b[i] = '\0' ; i++)
+    for(i = 0 ; a[i] != '\0' || b[i] != '\0' ; i++)
     {
         if(a[i] != b[i])
             f =  1;
             break;
 
     }
+    if(f==0)
+        printf("\n\tstring are same ");
+    else
+        printf("\n\tstring are no same ");
 
+    return 0;
 }
