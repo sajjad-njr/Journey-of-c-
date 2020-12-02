@@ -31,7 +31,7 @@ int main()
         x = c[i];
         if(l < x2 )
         {
-            a[i] = b[i];
+            a[i] = b[l];
             l = l + 1;
         }
         a[x3] = x ;
