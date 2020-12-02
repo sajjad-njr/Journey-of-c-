@@ -11,4 +11,9 @@ int main()
     printf("\nstring 2 : ");
     gets(b);
 
+    len1 = strlen(a);
+    len1 = strlen(a);
+
+    printf("\n\tLen = %d",len1);
+    return 0;
 }
