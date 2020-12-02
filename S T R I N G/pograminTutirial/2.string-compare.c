@@ -12,7 +12,7 @@ int main()
     gets(b);
 
     len1 = strlen(a);
-    len1 = strlen(a);
+    len2 = strlen(b);
 
     if(len1 == len2)
     {
@@ -37,8 +37,17 @@ int main()
     {
         printf("\n\tString are not same");
     }
-
-
+    if(same == 0)
+    {
+        if(a[i] > b[i])
+        {
+            printf("\n\tString 1 is bigger than 2");
+        }
+        else  if(a[i] < b[i])
+        {
+           printf("\n\tString 2 is bigger than 1");
+        }
+    }
     //printf("\n\tLen = %d",len1);
     return 0;
 }
