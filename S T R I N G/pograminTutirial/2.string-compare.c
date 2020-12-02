@@ -33,6 +33,10 @@ int main()
         same = 1 ;
         printf("\n\tThe strings are same");
     }
+    if(len1 != len2)
+    {
+        printf("\n\tString are not same");
+    }
 
 
     //printf("\n\tLen = %d",len1);
