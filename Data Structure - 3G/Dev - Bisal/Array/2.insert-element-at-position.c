@@ -2,7 +2,7 @@
 
 int main()
 {
-    int a[50],size,i ,element,pos;
+    int a[50],size,i,element,pos;
     printf("\nenter the array size : ");
     scanf("%d",&size);
 
@@ -12,6 +12,16 @@ int main()
         scanf("%d",&a[i]);
     }
 
-    printf("\nEnter  insert  element : \n ");
-     scanf("%d",element);
+    printf("\nEnter  insert  element : ");
+    scanf("%d",element);
+
+    printf("\nEnter  the position where you want to start element : ");
+    scanf("%d",pos);
+
+    for(i = size - 1 ; i >= pos - 1 ; i--)
+    {
+        a[i+1] = a[i];
+    }
+
+    return 0;
 }
