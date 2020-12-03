@@ -13,10 +13,10 @@ int main()
     }
 
     printf("\nEnter  insert  element : ");
-    scanf("%d",element);
+    scanf("%d",&element);
 
     printf("\nEnter  the position where you want to start element : ");
-    scanf("%d",pos);
+    scanf("%d",&pos);
 
     for(i = size - 1 ; i >= pos - 1 ; i--)
     {
