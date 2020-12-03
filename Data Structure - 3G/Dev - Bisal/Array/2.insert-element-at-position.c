@@ -22,6 +22,14 @@ int main()
     {
         a[i+1] = a[i];
     }
+    a[pos - 1] = element;
+    size++;
+
+    for(i= 0; i < size ; i++)
+    {
+        printf(" %d ",a[i]);
+    }
+
 
     return 0;
 }
