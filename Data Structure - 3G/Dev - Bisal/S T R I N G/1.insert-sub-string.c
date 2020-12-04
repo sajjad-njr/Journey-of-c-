@@ -4,7 +4,7 @@
 int main()
 {
     char a[100],b[100],c[100];
-    int i = 0 , j = 0 , pos , l ;
+    int i = 0 , j = 0 , pos = 0, l = 0 ;
     int x , x1,x2,x3;
 
     puts("enter main string ");
@@ -23,7 +23,6 @@ int main()
         c[i] = a[i];
         i++;
     }
-     puts(c);
 
     x1 = j + x2 ;
     x3 = x2 + pos ;
@@ -35,10 +34,14 @@ int main()
         if(l < x2)
         {
             a[i] = b[l];
-            l += 1;
+            l = l + 1;
         }
+        a[x3] = x;
+        x3 = x3 +  1 ;
     }
 
+    //puts(a); // use puts is not work i do not know
+    printf("\n\tconect : %s",a);
 
     return 0;
 }
