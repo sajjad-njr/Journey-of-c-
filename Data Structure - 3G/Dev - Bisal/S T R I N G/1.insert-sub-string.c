@@ -12,7 +12,7 @@ int main()
     puts("enter sub string ");
     gets(b);
 
-     puts("enter main string ");
+     puts("enter  position  ");
      scanf("%d",&pos);
 
      j = strlen(a);
@@ -24,6 +24,21 @@ int main()
         i++;
     }
      puts(c);
+
+    x1 = j + x2 ;
+    x3 = x2 + pos ;
+
+    for(i = pos ; i < x1 ; i++)
+    {
+        x = c[i];
+
+        if(l < x2)
+        {
+            a[i] = b[l];
+            l += 1;
+        }
+    }
+
 
     return 0;
 }
