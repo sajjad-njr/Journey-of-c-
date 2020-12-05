@@ -3,7 +3,7 @@
 
 int main()
 {
-    int K=1 ,Max,S,R,L;
+    int K=0 ,Max,S,R,L;
 
     char T[100],P[100];
 
@@ -15,7 +15,7 @@ int main()
 
     Max=S-R+1;
 
-    while(K<=Max)
+    while(K<Max)
     {
         for(L=0; L<R; L++)
         {
