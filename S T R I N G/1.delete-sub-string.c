@@ -9,11 +9,34 @@ int main()
     char str[100], word[100],newStr[100];
 
     printf("\nEnter a string : ");
-    scanf("%s",&str);
+    gets(str);
+    //scanf("%s",&str);
 
     printf("\nEnter a word that remove from main string : ");
-    scanf("%s",&word);
+   gets(word);
+    //scanf("%s",&word);
 
+    for(i = 0 ; str[i] != '\0' ; i++)
+    {
+        k = i;
+        while(str[i] == word[j])
+        {
+            i++,j++;
+            if (j == strlen(word))
+            {
+                flag = 1 ;
+                break;
+            }
+        }
+        j = 0 ;
+        if(flag == 0)
+            i = k;
+        else
+            flag = 0;
+        newStr[n++] = str[i];
+    }
+    newStr[n] = '\0';
+   printf("\n\n\tnew string : %s",newStr);
 
-
+   return 0;
 }
