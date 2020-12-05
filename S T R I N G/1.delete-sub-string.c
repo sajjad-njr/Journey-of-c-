@@ -10,4 +10,10 @@ int main()
 
     printf("\nEnter a string : ");
     scanf("%s",&str);
+
+    printf("\nEnter a word that remove from main string : ");
+    scanf("%s",&word);
+
+
+
 }
