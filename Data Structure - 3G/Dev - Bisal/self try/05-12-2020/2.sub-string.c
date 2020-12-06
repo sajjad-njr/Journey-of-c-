@@ -33,6 +33,8 @@ int main()
          newl[n++] = str[i];
 
     }
+    newl[n] = '\0';
 
+    printf("\n\t\tnew string is :%s ",newl);
     return 0;
 }
