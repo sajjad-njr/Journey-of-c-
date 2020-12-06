@@ -12,5 +12,27 @@ int main()
 
     printf("\nEnter a  word that you want to remove : ");
     gets(word);
+
+    for(; str[i] != '\0'; i++)
+    {
+        k = i ;
+        while(str[i] == word[j])
+        {
+            i++,j++;
+            if(j == strlen(word))
+            {
+                flag = 1 ;
+                break;
+            }
+        }
+        j = 0 ;
+         if(flag == 0)
+            i = k;
+         else
+            flag = 0;
+         newl[n++] = str[i];
+
+    }
+
     return 0;
 }
