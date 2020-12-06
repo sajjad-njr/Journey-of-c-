@@ -12,5 +12,14 @@ int main()
     puts("\n\tEnter the word where you want : ");
     gets(b);
 
+    j=strlen(a);
+    x2 =strlen(b);
+
+    while(i<=j)
+    {
+        c[i] = a[i];
+        i++;
+    }
+
     return 0;
 }
