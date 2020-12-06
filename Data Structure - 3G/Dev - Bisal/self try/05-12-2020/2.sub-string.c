@@ -10,5 +10,7 @@ int main()
     printf("\nEnter a string : ");
     gets(str);
 
+    printf("\nEnter a  word that you want to remove : ");
+    gets(word);
     return 0;
 }
