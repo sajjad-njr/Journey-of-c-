@@ -12,6 +12,9 @@ int main()
     puts("\n\tEnter the word where you want : ");
     gets(b);
 
+    puts("\n\tEnter the  position where you want to add : ");
+    scanf("%d",&k);
+
     j=strlen(a);
     x2 =strlen(b);
 
@@ -19,6 +22,15 @@ int main()
     {
         c[i] = a[i];
         i++;
+    }
+    x1 = x2 + j ;
+    x3 = k + x2;
+
+    for(i = k ; i < x1 ; i++)
+    {
+        x3=c[i];
+
+
     }
 
     return 0;
