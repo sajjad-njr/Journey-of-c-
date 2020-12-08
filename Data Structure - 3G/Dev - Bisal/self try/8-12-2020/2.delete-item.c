@@ -14,8 +14,16 @@ int main()
     {
         scanf("%d",&a[i]);
     }
-    printf("\n\tEnter array  insert position : ");
+
+    printf("\n\tEnter array   delete  position : ");
     scanf("%d",&pos);
-    printf("\n\tEnter array  insert  element : ");
+    printf("\n\tEnter array  delete element : ");
     scanf("%d",&data);
+
+   for(i = 0 ; i < n - 1 ; i++)
+   {
+       a[i] = a[i+1];
+   }
+
+    return 0;
 }
