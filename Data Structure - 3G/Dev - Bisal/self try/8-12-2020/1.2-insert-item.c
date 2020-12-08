@@ -19,8 +19,13 @@ int main()
     scanf("%d",&data);
 
 
+    for(i = n - 1 ; i >= pos - 1 ; i--)
+    {
+       a[i+1] = a[i];
+    }
 
-
+    a[pos - 1] = data;
+    n = n + 1;
 
      for(i = 0 ; i < n ; i++)
     {
