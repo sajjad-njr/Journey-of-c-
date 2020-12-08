@@ -3,7 +3,7 @@
 int main()
 {
     int a[10];
-    int i = 0,size,pos = 0,element = 0;
+    int i = 0,size,data,pos = 0,element = 0;
 
     printf("\n\tEnter size of array : ");
     scanf("%d",&size);
@@ -19,11 +19,11 @@ int main()
     scanf("%d",&pos);
     printf("\n\tEnter array  delete element : ");
     scanf("%d",&data);
-
-   for(i = 0 ; i < n - 1 ; i++)
+    pos = pos - 1;
+   for(i = pos ; i < size - 1 ; i++)
    {
        a[i] = a[i+1];
    }
-
+    size = size - 1;
     return 0;
 }
