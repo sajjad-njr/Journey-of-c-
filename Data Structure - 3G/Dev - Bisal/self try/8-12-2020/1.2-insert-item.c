@@ -3,7 +3,7 @@
 int main()
 {
     int a[1000];
-    int i = 0 , pos = 0 ,n;
+    int i = 0 , pos = 0 ,n,data;
 
     printf("\n\tEnter array size : ");
     scanf("%d",&n);
@@ -12,6 +12,15 @@ int main()
     {
         scanf("%d",&a[i]);
     }
+
+    printf("\n\tEnter array  insert position : ");
+    scanf("%d",&pos);
+    printf("\n\tEnter array  insert  element : ");
+    scanf("%d",&data);
+
+
+
+
 
      for(i = 0 ; i < n ; i++)
     {
