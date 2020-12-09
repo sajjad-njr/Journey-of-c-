@@ -18,7 +18,7 @@ int main()
     {
         k = i;
 
-        while(str[i] == word[i])
+        while(str[i] == word[j])
         {
             i++,j++;
             if(j==strlen(str2))
@@ -36,6 +36,6 @@ int main()
     }
     newl[n] = '\0';
 
-    printf()
+    printf("\nNew string = %s",newl);
     return 0;
 }
