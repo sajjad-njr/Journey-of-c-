@@ -19,5 +19,10 @@ int main()
     j = strlen(a);
     x2 = strlen(b);
 
+    while(i <= j)
+    {
+        c[i] = a[i];
+        i++;
+    }
     return 0;
 }
