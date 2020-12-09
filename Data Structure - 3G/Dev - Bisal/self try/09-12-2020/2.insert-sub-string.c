@@ -24,5 +24,21 @@ int main()
         c[i] = a[i];
         i++;
     }
+    x1 = j + x2;
+    x3 = x2 + k;
+
+    for(i = k ; i < x1 ; i++)
+    {
+        x = c[i];
+        if(l < x2)
+        {
+            a[i] = b[l];
+            l = l + 1;
+        }
+        a[x3]=x;
+        x3 = x3 + 1;
+    }
+
+    printf("\n\tnew string : %s",a);
     return 0;
 }
