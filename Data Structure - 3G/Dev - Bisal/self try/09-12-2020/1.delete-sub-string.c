@@ -14,16 +14,16 @@ int main()
     printf("\n\tEnter any to sort : ");
     gets(str2);
 
-    for(i=0;str1[i]='\0';i++)
+    for(i=0; str1[i] !='\0'; i++)
     {
         k = i;
 
-        while(str[i] == word[j])
+        while(str1[i] == str2[j])
         {
             i++,j++;
             if(j==strlen(str2))
             {
-                flag  = 0 ;
+                flag  = 1 ;
                 break;
             }
         }
