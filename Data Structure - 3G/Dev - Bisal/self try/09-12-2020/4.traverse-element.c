@@ -12,7 +12,8 @@ int main()
         printf(" %d ",a[i]);
 
         printf(" %d ",a[i]*wassi);
+        printf("\n");
     }
-
+    printf("\n\tWassi ");
     return 0;
 }
