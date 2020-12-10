@@ -10,10 +10,14 @@ int main()
         printf(" %d ",a[i]);
     }
 
-    printf("\nenter an element ")
+    printf("\nenter an element ");
     scanf("%d",&element);
 
+    printf("\nenter an  pos ");
+    scanf("%d",&pos);
 
+    if(pos < 0 &&  pos > 10 )
+        printf("\nData is not found");
 
 
 
