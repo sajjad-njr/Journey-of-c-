@@ -2,10 +2,10 @@
 
 int main()
 {
-    int a[10] = {45,56,7,78,9,87,54,32,29,987};
+    int n = 10 ,a[10] = {45,56,7,78,9,87,54,32,29,987};
     int i , j,pos,element ;
 
-    for(i = 0 ; i < 10 ; i++)
+    for(i = 0 ; i <n ; i++)
     {
         printf(" %d ",a[i]);
     }
@@ -16,9 +16,17 @@ int main()
     printf("\nenter an  pos ");
     scanf("%d",&pos);
 
-    if(pos < 0 &&  pos > 10 )
+    if(pos < 0 &&  pos > n )
         printf("\nData is not found");
-
+    else
+    {
+        for(i = 0 ; i >= pos; i--)
+        {
+            a[i+1] = a[i];
+        }
+        a[pos] = element;
+        n = n + 1;
+    }
 
 
 
