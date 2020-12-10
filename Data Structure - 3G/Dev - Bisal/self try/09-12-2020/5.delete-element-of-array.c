@@ -14,10 +14,11 @@ int main()
     printf("\n\tEnter position where you want to delete : ");
     scanf("%d",&pos);
 
+    printf("\n\tbefore delete array : \n");
 
     for(i = pos ; i < 5 ; i++)
     {
-         a[i+1] = a[i];
+        a[i+1] = a[i];
     }
     n = n - 1 ;
     for(i = 0 ; i < n ; i++)
