@@ -24,11 +24,15 @@ int main()
         {
             a[i+1] = a[i];
         }
-        a[pos] = element;
+        a[pos - 1] = element;
         n = n + 1;
     }
 
 
+    for(i = 0 ; i <n ; i++)
+    {
+        printf(" %d ",a[i]);
+    }
 
     return 0;
 }
