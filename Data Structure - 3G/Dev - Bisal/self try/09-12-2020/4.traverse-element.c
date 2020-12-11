@@ -3,7 +3,7 @@
 int main()
 {
     int n = 10 ,a[10] = {45,56,7,78,9,87,54,32,29,987};
-    int i , j,pos,element ;
+    int i;
 
     int wassi = 2 ;
 
@@ -14,6 +14,6 @@ int main()
         printf(" %d ",a[i]*wassi);
         printf("\n");
     }
-    printf("\n\tWassi ");
+
     return 0;
 }
