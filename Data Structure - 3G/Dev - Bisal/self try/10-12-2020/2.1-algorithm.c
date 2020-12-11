@@ -3,19 +3,19 @@
 
 int main()
 {
-    int a[5] = {67,89,99,554,32};
-    int i , loc = 0 , max = a[0];
+    int DATA[5] = {67,89,999,554,32};
+    int K , LOC = 0 ,  MAX = DATA[0];
 
-    for(i = 0 ; i < 5 ; i++)
+    for(K = 0 ; K < 5 ; K++)
     {
-        if(a[i] > max)
+        if(DATA[K] > MAX)
         {
-             max = a[i];
-             loc = i;
+             MAX = DATA[K];
+             LOC = K;
         }
     }
 
-    printf("\n\tThe maximum value is : %d and find position %d",max,loc+1);
+    printf("\n\tThe maximum value is = %d and found the position = %d",MAX,LOC+1);
 
     return 0;
 }
