@@ -2,24 +2,26 @@
 
 int main()
 {
-    char a[20], b[20];
-    int a1 = 0,i = 0 ,j = 0;
+    char A[20], B[20];
+    int lenA = 0,i = 0 ,j = 0;
 
-    gets(a);
-    gets(b);
+    printf("\n\tEnter 1st string : ");
+    gets(A);
+    printf("\n\tEnter  2nd string : ");
+    gets(B);
 
-    for(i = 0 ; a[i] != '\0' ; i++)
+    for(i = 0 ; A[i] != '\0' ; i++)
     {
-        a1++;
+        lenA++;
     }
 
-    for(i = a1 , j ; b[j] != '\0' ; i++, j++)    {
-         a[i] = b[j];
+    for(i = lenA , j ; B[j] != '\0' ; i++, j++)    {
+         A[i] = B[j];
     }
-    a[i] = '\0';
+    A[i] = '\0';
 
 
-    printf("%s",a);
+    printf("\n\tafter connect two string = %s",A);
     return 0;
 
 }
