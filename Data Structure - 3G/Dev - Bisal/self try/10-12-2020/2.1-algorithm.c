@@ -16,6 +16,5 @@ int main()
     }
 
     printf("\n\tThe maximum value is = %d and found the position = %d",MAX,LOC+1);
-
     return 0;
 }
