@@ -13,7 +13,6 @@ int main()
         scanf("%d",&data[i]);
 
     }
-
     printf("\n\tEnter the search item : ");
     scanf("%d",&item);
 
@@ -24,10 +23,9 @@ int main()
             loc =  i ;
             break;
         }
-
     }
 
-    if(loc = 0)
+    if(loc == 0)
         printf("\n\t:Item is not found ");
     else
         printf("\n\t %d is the location of item = %d",loc+1,item);
