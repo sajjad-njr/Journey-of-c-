@@ -1,15 +1,17 @@
-#inclede<stdio.h>
+#include<stdio.h>
 
-struct perosn
+struct  wassi
 {
     int age ;
-    char salary ;
+    float salary ;
 };
 
 int main()
 {
-    struct person person1 = {29,780.98};
+    struct  wassi person1 = {29,780.98};
 
-    struct person person2 , person3;
+    printf("preson age = %d and salary = %.2f",person1.age,person1.salary);
+    // struct person person2 , person3;
 
+    return 0;
 }
