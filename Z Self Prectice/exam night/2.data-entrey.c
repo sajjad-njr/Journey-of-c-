@@ -5,18 +5,20 @@ int main()
     int i , j ;
     int a[5] = { 1,2,3,4,5};
 
-    int pos ;
-    scanf("%d",&pos);
     int item;
+    int pos ;
+
+    scanf("%d",&pos);
+
     scanf("%d",&item);
 
-    for(i = 5 ; i >= pos - 1 ; i--)
+    for(i = 4 ; i >= pos - 1 ; i--)
     {
-        a[i]=a[i+1];
+        a[i+1]=a[i];
     }
-    a[pos] = item;
+    a[pos-1] = item;
 
-    for(i = 0 ; i < 6 ; i++)
+    for(i = 0 ; i < 5 ; i++)
     {
         printf("%d",a[i]);
     }

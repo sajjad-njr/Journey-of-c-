@@ -12,12 +12,12 @@ int main()
         scanf("%d",&a[i]);
     }
 
-    printf("\nEnter  insert  element : ");
-    scanf("%d",&element);
+
 
     printf("\nEnter  the position where you want to start element : ");
     scanf("%d",&pos);
-
+    printf("\nEnter  insert  element : ");
+    scanf("%d",&element);
     for(i = size - 1 ; i >= pos - 1 ; i--)
     {
         a[i+1] = a[i];
