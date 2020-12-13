@@ -7,4 +7,8 @@ int main()
 
     int pos ;
     scanf("%d",&pos);
+    int item;
+    scanf("%d",&item);
+
+
 }
