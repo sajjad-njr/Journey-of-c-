@@ -10,7 +10,7 @@ int main()
     int item;
     scanf("%d",&item);
 
-    for(i = 5 ; i >= pos ; i--)
+    for(i = 5 ; i >= pos - 1 ; i--)
     {
         a[i]=a[i+1];
     }
@@ -20,4 +20,6 @@ int main()
     {
         printf("%d",a[i]);
     }
+
+    return 0;
 }
