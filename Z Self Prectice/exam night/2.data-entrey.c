@@ -10,5 +10,14 @@ int main()
     int item;
     scanf("%d",&item);
 
+    for(i = 5 ; i >= pos ; i--)
+    {
+        a[i]=a[i+1];
+    }
+    a[pos] = item;
 
+    for(i = 0 ; i < 6 ; i++)
+    {
+        printf("%d",a[i]);
+    }
 }
