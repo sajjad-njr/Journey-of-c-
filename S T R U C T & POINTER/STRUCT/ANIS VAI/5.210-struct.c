@@ -17,5 +17,7 @@ int main()
 
     printf("preson age = %d and salary = %.2f",f.age,f.salary);
 
+
+
     return 0;
 }
