@@ -8,11 +8,16 @@ int main()
         scanf("%d",&a[i]);
     }
 
-    scanf("%d",&size);
-    for(i = 0 ; i < size ; i++)
+    scanf("%d",&pos);
+    for(i = pos ; i < size ; i++)
     {
-        scanf("%d",&a[i]);
+        a[i+1] = a[i];
     }
 
+
+    for(i = 0 ; i < size  ; i++)
+    {
+         printf(" %d ",a[i]);
+    }
     return 0;
 }
