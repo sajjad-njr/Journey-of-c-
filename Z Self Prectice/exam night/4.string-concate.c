@@ -14,5 +14,13 @@ int main()
 
     }
 
+    for(i = len , j = 0 ; str2[j] != 0 ; i++,j++)
+    {
+        str1[i] = str2[j];
+    }
+    str1[i] = '\0';
+
+   printf("%s",str1);
+
     return 0;
 }
