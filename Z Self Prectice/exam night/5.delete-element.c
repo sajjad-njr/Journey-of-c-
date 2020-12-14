@@ -9,13 +9,13 @@ int main()
     }
 
     scanf("%d",&pos);
-    for(i = pos ; i < size ; i++)
+    for(i = pos - 1 ; i < size ; i++)
     {
-        a[i+1] = a[i];
+        a[i] = a[i+1];
     }
 
 
-    for(i = 0 ; i < size  ; i++)
+    for(i = 0 ; i < size - 1 ; i++)
     {
          printf(" %d ",a[i]);
     }
