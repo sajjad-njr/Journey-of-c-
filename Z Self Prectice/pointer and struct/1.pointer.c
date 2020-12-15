@@ -7,5 +7,6 @@ int main()
     printf(" good = %d",i);
      printf("\n1 good = %d",&i);
 
-     printf("\n1 good = %d",&i);
+     printf("\n1 good = %d",&ptr);
+      printf("\n1 good = %d",*ptr);
 }
