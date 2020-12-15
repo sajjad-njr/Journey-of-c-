@@ -1,20 +1,20 @@
 #include<stdio.h>
 
-int *add (int c, int b)
+int add (int *c, int *b)
 {
     int a;
-    a = c + b ;
+    a = *c + *b ;
     return a ;
 }
 
 int main()
 {
-    int  a = 5 , b = 7 , f;
+    int  a = 50 , b = 7 , f;
 
-    int *c;
-    c = &add ;
-
-    f = c(5,7);
+    int c;
+    c = add(&a,&b);
 
     printf("%d",c);
+
+    return 0;
 }
