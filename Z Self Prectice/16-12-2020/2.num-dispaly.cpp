@@ -14,8 +14,13 @@ int main()
             cout << i << endl;
         }
     }
-    cout << endl << "total factor = " << countn ;
+   // total number factor count
+    //cout << endl << "total factor = " << countn ;
 
+    if(countn == 2)
+        cout << "The number is prime " << endl;
+    else
+         cout << "The number is not prime " << endl;
 
 
     return 0;
