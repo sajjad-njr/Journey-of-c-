@@ -3,6 +3,9 @@ using namespace std ;
 
 int main()
 {
+
+    //append means add of the end ;
+
     string str = " a country";
 
     str.append(" Bangladesh ");
