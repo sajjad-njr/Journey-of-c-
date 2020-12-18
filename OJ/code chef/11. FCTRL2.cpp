@@ -1,6 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std ;
 
+int re(int a)
+{
+    if(a==1)
+    {
+        return 1;
+    }
+
+    return a * re(a-1);
+}
+
 int main()
 {
     int t, a ;
@@ -8,14 +18,11 @@ int main()
 
     while(t--)
     {
-        int m = 1, fact = 1 ;
+        //int m ;
         cin >> a;
-        for(int i =  1 ; i < a ; i++)
-        {
-            m = fact *( a - i);
-        }
+        //m = re(a);
 
-        cout << m << endl;
+        cout << re(a) << endl;
     }
 
     return 0;
