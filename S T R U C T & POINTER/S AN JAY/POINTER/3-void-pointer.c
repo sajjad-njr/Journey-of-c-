@@ -12,7 +12,8 @@ int main()
     //printf("%d",&a);
     printf("%d",((int*)o));
 
-
+    o = &v;
+    printf("\n%d",((float*)o));
     return 0;
 
 
