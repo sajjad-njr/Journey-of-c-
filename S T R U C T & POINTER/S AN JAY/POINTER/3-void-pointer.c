@@ -7,6 +7,12 @@ int main()
 
     void *o;
     o = &a;
+    printf("%d",v);
+
+    //printf("%d",*((int*)o));
+
+
+    return 0;
 
 
 }
