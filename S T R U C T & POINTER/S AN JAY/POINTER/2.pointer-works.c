@@ -5,10 +5,10 @@ int main()
     int *p;
     p = &a;
     printf("\nEnter a value = %d",a);
-     printf("\nEnter a value = %d",*p);
+    printf("\nEnter a value = %d",*p);
 
-      printf("\nEnter a value = %p",&a);
-       printf("\nEnter a value = %p",p);
+    printf("\nEnter a value = %p",&a);
+    printf("\nEnter a value = %p",p);
 
-       return 0;
+    return 0;
 }
