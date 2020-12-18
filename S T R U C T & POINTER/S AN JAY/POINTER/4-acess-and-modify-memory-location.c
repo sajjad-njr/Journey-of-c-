@@ -10,7 +10,10 @@ int main()
     printf("\nThe value of a = %d",a);
     printf("\nThe value of a = %d",*p);
 
-
+    *p = *p + a;
+    printf("\n\n\n\n");
+    printf("\nThe value of a = %d",a);
+    printf("\nThe value of a = %d",*p);
 
     return 0;
 }
