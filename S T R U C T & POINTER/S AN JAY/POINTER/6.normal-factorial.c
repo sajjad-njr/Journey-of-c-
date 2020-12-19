@@ -2,16 +2,24 @@
 
 int main()
 {
-    int i , n , f = 1;
-    printf("enter a number");
-
+    int i, n ,t;
+    printf("enter a number ");
     scanf("%d",&n);
-
-    for(i = 1 ; i <= n ; i++)
+    while(n--)
     {
-        f = f * i;
+        int f = 1;
+        scanf("%d",&t);
+
+        for(i = 1 ; i <= t; i++)
+        {
+            f = f * i;
+        }
+         printf("\n%d",f);
     }
 
-    printf("%d",f);
+
+
+
+
     return 0;
 }
