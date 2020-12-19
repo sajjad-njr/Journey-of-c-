@@ -14,12 +14,8 @@ int main()
         {
             f = f * i;
         }
-         printf("\n%d",f);
+         printf("%d\n",f);
     }
-
-
-
-
 
     return 0;
 }
