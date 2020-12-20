@@ -3,7 +3,7 @@ int main()
 {
     int a,i ;
     int b;
-    scanf("%d",&b);
+    //scanf("%d",&b);
 
    /* while(b--)
     {
@@ -19,5 +19,9 @@ int main()
         printf("\n");
     }
     */
+    for(int i = 0 ; i < 100 ; i++)
+    {
+        printf(" %d ",i+1);
+    }
     return 0;
 }
