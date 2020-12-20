@@ -5,7 +5,7 @@ int main()
     int b;
     scanf("%d",&b);
 
-    while(b--)
+   /* while(b--)
     {
         scanf("%d",&a);
         if(a == 42)
@@ -18,5 +18,6 @@ int main()
             }
         printf("\n");
     }
+    */
     return 0;
 }
