@@ -19,16 +19,22 @@ int main()
          printf("\n");
      }
      */
-    for(int i = 0 ; i < 100 ; i++)
+    for(int j = 0 ; j < 10 ; j++)
     {
-        printf(" %d ",i+1);
-    }
-    printf("\n"); printf("\n");
+        for(int i = 0 ; i < 100 ; i++)
+        {
+            printf(" %d ",i+1);
+        }
+        printf("\n");
+        printf("\n");
 
-    for(int i = 0 ; i < 100 ; i++)
-    {
-        if(i%2 == 0)
-            printf(" %d ",i);
+        for(int i = 0 ; i < 100 ; i++)
+        {
+            if(i%2 == 0)
+                printf(" %d ",i);
+        }
+        if(j == 8 )
+            printf("\n\n\nsajjjjjjjjjjjjjjjjjjjjjjjjjjad\n");
     }
     return 0;
 }
