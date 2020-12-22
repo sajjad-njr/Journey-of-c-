@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int maxi(int a = 0, int b = 0, int c = 0)
+int maxi(int a = 0, int b = 0, int c = 0)  // if u do not default value zero here its not work
 {
     return a > b && a > c ? a:(b>c ? b : c);
 }
