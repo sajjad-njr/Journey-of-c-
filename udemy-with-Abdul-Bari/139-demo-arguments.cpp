@@ -9,5 +9,6 @@ int maxi(int a = 0, int b = 0, int c = 0)
 int main()
 {
     cout<<maxi() << endl;
+    cout<<maxi(3,4)<< endl;
     return 0;
 }
