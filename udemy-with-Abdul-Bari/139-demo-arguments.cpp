@@ -8,7 +8,9 @@ int maxi(int a = 0, int b = 0, int c = 0)
 
 int main()
 {
-    cout<<maxi() << endl;
+    cout<<maxi()<< endl;
+    cout<<maxi(89)<< endl;
     cout<<maxi(3,4)<< endl;
+    cout<<maxi(34,2,1)<< endl;
     return 0;
 }
