@@ -15,12 +15,14 @@ void main()
 
     h->data = 890;
     h->next = NULL ;
-    printf("\n\tH node = %d \t Node address = %u",h->data,h->next);
+
+    printf("\n\t%u H node = %d \t Node address = %u",h,h->data,h->next);
+
     m->data = 1890;
     m->next = NULL ;
 
     h->next = m ;
 
-
-    printf("\n\tM node = %d \t Node address = %u",h->next->data,h->next->next);
+    printf("\n\t%u H node = %d \t Node address = %u",h,h->data,h->next);
+    printf("\n\t%u M node = %d \t Node address = %u",m,h->next->data,h->next->next);
 }
