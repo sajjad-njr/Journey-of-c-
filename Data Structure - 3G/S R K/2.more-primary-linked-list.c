@@ -8,17 +8,19 @@ typedef struct node
 
 void main()
 {
-    Node *h , *m;
+    Node *h, *m;
 
     h = (Node*) malloc(sizeof(Node));
     m = (Node*) malloc(sizeof(Node));
 
     h->data = 890;
     h->next = NULL ;
-
-     m->data = 1890;
+    printf("\n\tH node = %d \t Node address = %u",h->data,h->next);
+    m->data = 1890;
     m->next = NULL ;
 
-    printf("\n\tH node = %d \t Node address = %u",h->data,h->next);
+    h->next = m ;
 
+
+    printf("\n\tM node = %d \t Node address = %u",h->next->data,h->next->next);
 }
