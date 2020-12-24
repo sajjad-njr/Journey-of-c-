@@ -10,5 +10,9 @@ typedef struct node
 
 int main()
 {
+    Node *h1,*h2,*h3;
 
+    h1 = (Node*) malloc (sizeof(Node));
+    h2 = (Node*) malloc (sizeof(Node));
+    h3 = (Node*) malloc (sizeof(Node));
 }
