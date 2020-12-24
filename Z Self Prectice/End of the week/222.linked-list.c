@@ -22,8 +22,15 @@ int main()
     h2->data = 100;
     h2->next = h3;
 
-    h2->data = 19700;
-    h2->next = NULL;
+    h3->data = 19700;
+    h3->next = NULL;
 
-    printf()
+    printf("\n%u H1 Node value is = %d \tNode Address = %u",h1,h1->data,h1->next);
+
+    printf("\n%u H2 Node value is = %d \tNode Address = %u",h2,h2->data,h2->next);
+
+    printf("\n%u H3 Node value is = %d \tNode Address = %u",h3,h3->data,h3->next);
+
+    return 0;
+
 }
