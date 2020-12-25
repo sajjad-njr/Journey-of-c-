@@ -15,5 +15,6 @@ int main()
     cin>> info.id;
     cin >> info.name;
 
-
+    cout << info.name << " " << info.id << " " << info.marks  << endl;
+    return 0;
 }
