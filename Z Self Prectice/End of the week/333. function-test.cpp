@@ -1,15 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void sum1(int a = 100 , int b = 90 , int c = 10)
+int sum1(int a = 0, int b = 0, int c = 0)
 {
     return a + b + c ;
 }
 int main()
 {
-    int a = 8 ; int b = 9 ;
-    int sum = a + b;
-    cout << sum1(a,b) << endl;
+    int x = 8 ;
+    int y = 9 ;
+    int sum ;
+    sum = x + y;
+    cout << sum1(x) << endl;
     cout << sum ;
     return 0;
 }
