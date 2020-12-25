@@ -13,7 +13,7 @@ int main()
     student info ;
     cin.get(info.name,50);
     cin>> info.id;
-    cin >> info.name;
+    cin >> info.marks;
 
     cout << info.name << " " << info.id << " " << info.marks  << endl;
     return 0;
