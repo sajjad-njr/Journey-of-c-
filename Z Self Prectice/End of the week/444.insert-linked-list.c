@@ -13,4 +13,6 @@ void insert_front( nfo *list,int data)
     temp->data=data;
     temp-next=list;
     list=temp;
+
+
 }
