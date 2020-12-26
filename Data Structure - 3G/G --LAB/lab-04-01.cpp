@@ -3,7 +3,7 @@ using namespace std ;
 
 struct student
 {
-     string name;
+    string name;
     int id ;
     float marks ;
 };
