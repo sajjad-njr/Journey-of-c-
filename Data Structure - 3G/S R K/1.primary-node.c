@@ -1,9 +1,10 @@
 #include<stdio.h>
 
-typedef struct node{
+typedef struct node
+{
     int data ;
     struct node *next;
-}Node;
+} Node;
 
 void main()
 {
