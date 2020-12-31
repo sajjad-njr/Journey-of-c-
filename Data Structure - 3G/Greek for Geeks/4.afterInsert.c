@@ -54,7 +54,7 @@ int main()
 
    // this is use null node to watch null
    // afterInset(m,89);
-
+     afterInset(head->next, 789);
 
     p = head;
 
