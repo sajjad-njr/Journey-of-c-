@@ -7,16 +7,24 @@ typedef struct node
     struct node *next ;
 
 } Node;
-
-//void new_data();
-
+/*
+void new_data(Node** h , int n)
+{
+      Node *i = (Node*) malloc (sizeof(Node));
+      i->data= n;
+      i->next = *h ;
+}
+*/
 int main()
 {
-    Node *a, *b, *c, *d;
+    Node *a, *b, *c, *d , *l;
 
     a = (Node*) malloc (sizeof(Node));
     b = (Node*) malloc (sizeof(Node));
     c = (Node*) malloc  (sizeof(Node));
+    d = (Node*) malloc  (sizeof(Node));
+
+
 
     a->data = 56;
     a->next = b ;
@@ -26,6 +34,12 @@ int main()
 
     c->data = 70;
     c->next = NULL ;
+
+
+    d -> data = 90 ;
+    d->next = a;
+    a =  d;
+
 
     while(a != NULL)
     {
