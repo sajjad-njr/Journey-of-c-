@@ -2,18 +2,22 @@
 
 int main()
 {
-    int a[1000];
-    int i, j, t , temp ;
 
+    int i, j, t ,n, temp ;
 
-    for(i = 0 ; i < 5 ; i++)
+    printf("\n\t Enter size of array ");
+    scanf("%d",&n);
+
+    int a[n];
+
+    for(i = 0 ; i < n ; i++)
     {
         scanf("%d",&a[i]);
     }
 
-    for(i = 0 ; i < 5 ; i++)
+    for(i = 0 ; i < n ; i++)
     {
-        for( j = i ; j < 4 ; j++)
+        for( j = i ; j < n - 1 ; j++)
         {
             if(a[i] > a[j+1])
               {
@@ -25,7 +29,7 @@ int main()
     }
 
 
-    for(i = 0 ; i < 5 ; i++)
+    for(i = 0 ; i < n ; i++)
     {
         printf(" %d  ",a[i]);
     }
