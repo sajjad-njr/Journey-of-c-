@@ -23,7 +23,7 @@ int main()
     b = (Node*) malloc (sizeof(Node));
     c = (Node*) malloc  (sizeof(Node));
     d = (Node*) malloc  (sizeof(Node));
-
+    l = (Node*) malloc  (sizeof(Node));
 
 
     a->data = 56;
@@ -35,11 +35,14 @@ int main()
     c->data = 70;
     c->next = NULL ;
 
+    d -> data = 9990 ;
 
-    d -> data = 90 ;
     d->next = a;
     a =  d;
 
+    l->data = 1020;
+    l->next = a;
+    a = l;
 
     while(a != NULL)
     {
