@@ -1,11 +1,8 @@
 #include<bits/stdc++.h>
-using namespace std ;
-
+using namespace std;
 int main()
 {
-    int a , b ;
-
-    int t ;
+    int a , b , t ;
 
     cin >> t ;
 
