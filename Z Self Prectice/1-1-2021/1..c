@@ -29,7 +29,7 @@ int main()
 
     while(a != NULL)
     {
-        prinf(" %d ", a->data);
+        printf(" %d ", a->data);
         a = a ->next ;
     }
 
