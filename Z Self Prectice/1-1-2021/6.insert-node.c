@@ -5,10 +5,31 @@ typedef struct node
 {
     int data ;
     struct node *next;
-}Node;
+} Node;
 
 int main()
 {
-    Node *head, *new_node , *temp;
+    Node *head, *a, *new_node, *temp;
 
+    head =(Node *) malloc (sizeof(Node));
+    a =(Node *) malloc (sizeof(Node));
+    new_node =(Node *) malloc (sizeof(Node));
+
+    head -> data = 34;
+    head -> next = a;
+
+    a->data = 89;
+    a ->next = NULL;
+
+    temp = head ;
+
+    while (temp != NULL)
+    {
+        printf(" %d ",temp->data);
+        temp = temp -> next ;
+    }
+
+    /* printf("\n\tEnter node element that you want to insert = ");
+     scanf(" %d ",&new_node->data);
+     */
 }
