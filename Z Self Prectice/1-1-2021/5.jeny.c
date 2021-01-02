@@ -10,5 +10,36 @@ typedef struct node
 
 void main()
 {
+    Node *head , *newNode , *temp;
+    head = NULL;
+    int choice = 1 ;
 
+    while(choice)
+    {
+        newNode = (Node*) malloc(sizeof(Node));
+        printf("\n\tEnter a Node = ");
+        scanf("%d",&newNode->data);
+        newNode->next = NULL;
+
+        if(head == NULL)
+        {
+            head = temp = newNode;
+        }
+
+        else
+        {
+            temp -> next = newNode;
+            temp = newNode;
+        }
+
+        printf("\n\tDo wanna add more node : 1 or not 0 = ");
+        scanf("%d",&choice);
+    }
+    temp = head;
+    while (temp != NULL)
+    {
+        printf(" %d ",temp->data);
+
+        temp = temp->next ;
+    }
 }
