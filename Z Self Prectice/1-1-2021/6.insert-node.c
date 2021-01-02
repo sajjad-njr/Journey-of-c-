@@ -21,6 +21,7 @@ int main()
     a->data = 89;
     a ->next = NULL;
 
+    printf("\n\tHow many node add in the starting = ");
     scanf("%d",&t);
     while(t--)
     {
