@@ -21,15 +21,16 @@ int main()
     a->data = 89;
     a ->next = NULL;
 
+    printf("\n\tEnter node element that you want to insert = ");
+    scanf("%d",&new_node->data);
+     new_node -> next = head;
+        head = new_node;
     temp = head ;
 
-    while (temp != NULL)
+      while (temp != NULL)
     {
         printf(" %d ",temp->data);
         temp = temp -> next ;
     }
 
-    /* printf("\n\tEnter node element that you want to insert = ");
-     scanf(" %d ",&new_node->data);
-     */
 }
