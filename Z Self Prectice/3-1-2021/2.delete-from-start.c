@@ -36,6 +36,19 @@ void create()
         }
     }
 }
+void deleteNode()
+{
+    if(head == NULL)
+    {
+        printf("\n\tNode is empty\n");
+    }
+    else
+    {
+        temp = head ;
+        head = head ->next;
+        free(temp);
+    }
+}
 
 int main()
 {
@@ -43,6 +56,7 @@ int main()
 
     create();
 
+    deleteNode();
 
     //print part ;
     temp = head;
