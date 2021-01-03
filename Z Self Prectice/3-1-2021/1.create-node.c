@@ -12,7 +12,8 @@ Node *head, *temp,*new_node ;
 void create()
 {
     //Node *head, *temp, *new_node;
-
+    Node *total;
+    int count = 0 ;
     head = NULL;
 
     int n = 5 ;
@@ -38,7 +39,7 @@ void create()
 
 void startAdd()
 {
-   // Node *head, *temp,*new_node ;
+    // Node *head, *temp,*new_node ;
     new_node = (Node*) malloc (sizeof(Node));
 
     printf("\n\tEnter the node = ");
@@ -58,32 +59,37 @@ void addEnd()
     {
         temp = temp -> next ;
     }
-     temp-> next = new_node ;
+    temp-> next = new_node ;
 
 
 }
 
 int main()
 {
-   // Node *head, *temp, *new_node;
+    // Node *head, *temp, *new_node;
+
+    int count = 0 ;
 
     head = NULL;
 
     // create part ;
     create();
 
-   //add at the start
-    startAdd();
+    //add at the start
+    //startAdd();
 
     //At the end ;
-     addEnd();
+    //addEnd();
 
     //print part ;
 
     temp = head;
     while( temp != NULL)
     {
-        printf("  %d  ",temp->data);
+        if(temp->data%2==0)
+        {
+            printf("  %d  ",temp->data);
+        }
         temp = temp ->next ;
     }
     return 0;
