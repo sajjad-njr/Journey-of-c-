@@ -5,17 +5,18 @@ typedef struct node
 {
     int data ;
     struct node *next ;
-}Node;
+} Node;
 
+Node *head, *temp,*new_node ;
 
-int main()
+void create()
 {
-    Node *head , *temp, *new_node;
+    //Node *head, *temp, *new_node;
 
     head = NULL;
 
     int n = 5 ;
-
+    // create part ;
     while (n--)
     {
         new_node = (Node*)malloc(sizeof(Node));
@@ -33,8 +34,36 @@ int main()
             temp = new_node;
         }
     }
-    temp = head;
+}
 
+void startAdd()
+{
+   // Node *head, *temp,*new_node ;
+    new_node = (Node*) malloc (sizeof(Node));
+
+    printf("\n\tEnter the node = ");
+    scanf("%d",&new_node->data);
+
+    new_node -> next = head ;
+    head = new_node;
+}
+
+int main()
+{
+   // Node *head, *temp, *new_node;
+
+    head = NULL;
+
+    // create part ;
+
+    create();
+
+    startAdd();
+
+
+
+    //print part ;
+    temp = head;
     while( temp != NULL)
     {
         printf("  %d  ",temp->data);
