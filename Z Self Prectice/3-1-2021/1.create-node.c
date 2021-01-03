@@ -47,6 +47,21 @@ void startAdd()
     new_node -> next = head ;
     head = new_node;
 }
+void addEnd()
+{
+    new_node = (Node*) malloc (sizeof(Node));
+    printf("\n\tEnter the  End node = ");
+    scanf("%d",&new_node->data);
+    new_node -> next = NULL ;
+
+    while (temp -> next != NULL)
+    {
+        temp = temp -> next ;
+    }
+     temp-> next = new_node ;
+
+
+}
 
 int main()
 {
@@ -55,14 +70,16 @@ int main()
     head = NULL;
 
     // create part ;
-
     create();
 
+   //add at the start
     startAdd();
 
-
+    //At the end ;
+     addEnd();
 
     //print part ;
+
     temp = head;
     while( temp != NULL)
     {
