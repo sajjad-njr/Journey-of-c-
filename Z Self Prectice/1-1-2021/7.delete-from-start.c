@@ -5,8 +5,8 @@ typedef struct node
 {
     int data;
     struct node *next;
-}Node;
-Node *head, *temp , *new_node;
+} Node;
+Node *head, *temp, *new_node;
 
 void create()
 {
@@ -34,13 +34,17 @@ void create()
 int main()
 {
     //Node *head, *temp;
-    temp = head;
+    //temp = head;
+    Node *p;
 
     create();
 
-    while(temp != NULL)
+
+
+    p = head;
+    while(  p != NULL)
     {
-        printf(" %d ",temp->data);
-        temp = temp ->next;
+        printf(" %d ",p->data);
+        p = p->next;
     }
 }
