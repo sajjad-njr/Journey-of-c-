@@ -40,6 +40,21 @@ void deleteStart()
     free(temp);
 }
 
+void deleteEnd()
+{
+    Node *prev;
+    temp = head ;
+
+    while(temp->next != NULL)
+    {
+        prev = temp ;
+        temp = temp ->next;
+    }
+
+    prev->next = NULL;
+    free(temp);
+}
+
 int main()
 {
     //Node *head, *temp;
@@ -49,6 +64,8 @@ int main()
     create();
 
     deleteStart();
+
+    deleteEnd();
 
     p = head;
     while(  p != NULL)
