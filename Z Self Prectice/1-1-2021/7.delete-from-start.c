@@ -55,6 +55,28 @@ void deleteEnd()
     free(temp);
 }
 
+void deletePosition()
+{
+
+    Node *nextNode ;
+    int pos ;
+    int i = 1 ;
+    printf("\n\tEnter the position = ");
+    scanf("%d",&pos);
+
+    temp = head ;
+
+    while(i < pos - 1 )
+    {
+        temp = temp->next ;
+        i++;
+    }
+    nextNode = temp->next;
+    temp->next =  nextNode->next;
+
+    free(nextNode);
+
+}
 int main()
 {
     //Node *head, *temp;
@@ -63,9 +85,11 @@ int main()
 
     create();
 
-    deleteStart();
+    //deleteStart();
 
-    deleteEnd();
+    //deleteEnd();
+
+    deletePosition();
 
     p = head;
     while(  p != NULL)
