@@ -6,7 +6,7 @@ int main()
     int t, a,countt = 0  ;
     cin >> t ;
 
-    if(t>= 1 && t <= 10)
+    if(t <= 10)
     {
         while(t--)
         {
