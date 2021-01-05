@@ -3,25 +3,28 @@ using namespace std ;
 
 int main()
 {
-    int a, j, countt = 0  ;
-
-    int t ;
+    int t , a ,countt = 0  ;
     cin >> t ;
 
-    while(t--)
+    if(t>= 1 && t <= 10)
     {
-        cin >> a ;
-        countt++;
-        cout << "Case " << countt <<":" << " " ;
-        for(int i = 1; i <= a ; i++)
+        while(t--)
         {
-            if(a%i==0)
-            {
-                cout << i << " ";
-            }
+            cin >> a ;
+            countt++;
 
+            cout << "Case " << countt <<":" << " " ;
+            for(int i = 1; i <= a ; i++)
+            {
+                if(a%i==0)
+                {
+                    cout << i << " ";
+                }
+
+            }
+            cout << endl;
         }
-        cout << endl;
     }
+
     return 0;
 }
