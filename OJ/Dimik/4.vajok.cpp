@@ -3,7 +3,7 @@ using namespace std ;
 
 int main()
 {
-    int t , a ,countt = 0  ;
+    int t, a,countt = 0  ;
     cin >> t ;
 
     if(t>= 1 && t <= 10)
@@ -12,17 +12,20 @@ int main()
         {
             cin >> a ;
             countt++;
-
-            cout << "Case " << countt <<":" << " " ;
-            for(int i = 1; i <= a ; i++)
+            if(a >=1 && a <= 100000)
             {
-                if(a%i==0)
+                cout << "Case " << countt <<":" << " " ;
+                for(int i = 1; i <= a ; i++)
                 {
-                    cout << i << " ";
-                }
+                    if(a%i==0)
+                    {
+                        cout << i << " ";
+                    }
 
+                }
+                cout << endl;
             }
-            cout << endl;
+
         }
     }
 
