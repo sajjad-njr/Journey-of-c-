@@ -36,5 +36,8 @@ void display()
 int main()
 {
     push();
+    push();
+    push();
+    push();
     display();
 }
