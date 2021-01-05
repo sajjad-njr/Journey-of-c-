@@ -1,6 +1,7 @@
 #include<stdio.h>
 
-#define N 5;
+#define N 5
+
 int stack[N];
 int top = -1 ;
 void push()
@@ -17,9 +18,23 @@ void push()
     else
     {
         top++;
-        stack[top] = x;
+        stack[top] = a;
     }
 
 }
 
-void
+void display()
+{
+    int i ;
+
+    for(i = top ; i >= top ; i--)
+    {
+        printf(" %d ",stack[i]);
+    }
+}
+
+int main()
+{
+    push();
+    display();
+}
