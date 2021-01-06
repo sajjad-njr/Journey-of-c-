@@ -6,7 +6,7 @@ typedef struct node
     int data ;
     struct node *link;
 
-}Node;
+} Node;
 
 Node *top = 0;
 
@@ -32,6 +32,7 @@ void display()
     }
     else
     {
+        printf("\n");
         while(AVAIL != 0)
         {
             printf(" %d ",AVAIL->data);
@@ -48,46 +49,48 @@ void peek()
     }
     else
     {
-       printf("\n\tTop element is = %d",top->data);
+        printf("\n\tTop element is = %d",top->data);
     }
 }
 
-void last()
+void pop()
 {
-    if(top == 0 )
+     if(top == 0 )
     {
-        printf("\n\tStack is empty ");
+        printf("\n\tunderflow ");
     }
     else
     {
-        while(top->link == 0)
-        {
-            printf("\n\tLastelement is = %d",top->data);
-        }
+       top = top->link;
     }
 }
 
 int main()
 {
-   int a , b;
-   scanf("%d",&a);
-   while(a--)
-   {
-       scanf("%d",&b);
-       push(b);
-   }
+   /* int a, b;
+    scanf("%d",&a);
+    while(a--)
+    {
+        scanf("%d",&b);
+        push(b);
+    }
+*/
 
-
-
-    /*
     push(4);
-    push(78);
     push(54);
-    push(758);
-    */
+    push(400);
+    push(780);
+    push(540);
+    push(78);
+
     display();
     peek();
+    pop();
+
+    printf("\n\n\tAfter Pop \n");
+
     peek();
-    last();
+    display();
+
     return 0;
 }
