@@ -49,10 +49,11 @@ int main()
        scanf("%d",&b);
        push(b);
    }
-   push(4);
+    /*push(4);
     push(78);
     push(54);
     push(758);
+    */
     display();
 
     return 0;
