@@ -23,6 +23,18 @@ void create()
         scanf("%d",newNode->data);
         newNode->next = NULL;
 
+        if(head == NULL)
+        {
+            head = temp = newNode ;
+        }
+        else
+        {
+            temp->next = newNode;
+            temp = newNode;
+        }
+
+        printf("\n\tenter node element for : 1 or 0 = ");
+        scanf("%d",&ch);
 
     }
 }
