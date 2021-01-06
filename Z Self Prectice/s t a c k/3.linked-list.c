@@ -28,6 +28,32 @@ void display()
 
     if(top == 0)
     {
-        printf("\n\tNode is empty ");
+        printf("\n\tUnderflow");
     }
+    else
+    {
+        while(AVAIL != 0)
+        {
+            printf(" %d ",AVAIL->data);
+            AVAIL = AVAIL->link;
+        }
+    }
+}
+
+int main()
+{
+   int a , b;
+   scanf("%d",&a);
+   while(a--)
+   {
+       scanf("%d",&b);
+       push(b);
+   }
+   push(4);
+    push(78);
+    push(54);
+    push(758);
+    display();
+
+    return 0;
 }
