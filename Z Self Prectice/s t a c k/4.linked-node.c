@@ -7,11 +7,11 @@ typedef struct node
     struct node *next ;
 }Node;
 
+
+ Node *newNode , *head , *temp;
+
 void create()
 {
-    Node *newNode , *head , *temp;
-
-
     head = NULL;
     int ch = 1 ;
 
@@ -37,4 +37,22 @@ void create()
         scanf("%d",&ch);
 
     }
+}
+
+void display()
+{
+    Node *p;
+     newNode = (Node*)malloc(sizeof(Node));
+    p = head;
+    while(p != NULL)
+    {
+        printf(" %d ",p->data);
+        p = p ->next ;
+    }
+}
+
+int main()
+{
+    create();
+    display();
 }
