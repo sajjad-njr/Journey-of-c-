@@ -52,25 +52,42 @@ void peek()
     }
 }
 
+void last()
+{
+    if(top == 0 )
+    {
+        printf("\n\tStack is empty ");
+    }
+    else
+    {
+        while(top->link == 0)
+        {
+            printf("\n\tLastelement is = %d",top->data);
+        }
+    }
+}
+
 int main()
 {
    int a , b;
-  // scanf("%d",&a);
-   /*while(a--)
+   scanf("%d",&a);
+   while(a--)
    {
        scanf("%d",&b);
        push(b);
    }
 
-    */
 
+
+    /*
     push(4);
     push(78);
     push(54);
     push(758);
-
+    */
     display();
     peek();
     peek();
+    last();
     return 0;
 }
