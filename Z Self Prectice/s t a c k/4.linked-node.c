@@ -20,7 +20,7 @@ void create()
 
         newNode = (Node*)malloc(sizeof(Node));
         printf("\n\tEnter node element = ");
-        scanf("%d",newNode->data);
+        scanf("%d",&newNode->data);
         newNode->next = NULL;
 
         if(head == NULL)
@@ -41,13 +41,14 @@ void create()
 
 void display()
 {
-    Node *p;
-     newNode = (Node*)malloc(sizeof(Node));
-    p = head;
-    while(p != NULL)
+   temp = head;
+   // Node *p;
+   // newNode = (Node*)malloc(sizeof(Node));
+   // p = head;
+    while(temp != NULL)
     {
-        printf(" %d ",p->data);
-        p = p ->next ;
+        printf(" %d ",temp->data);
+        temp = temp ->next ;
     }
 }
 
