@@ -14,3 +14,8 @@ public:
     }
 };
 
+Node takeInput()]
+{
+    int data;
+    cin>>data;
+}
