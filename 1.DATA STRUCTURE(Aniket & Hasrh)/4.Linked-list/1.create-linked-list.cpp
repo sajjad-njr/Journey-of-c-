@@ -19,7 +19,7 @@ int main()
     Node n1(1);
     Node n2(2);
 
-    n2.next = &n1;
+    n1.next = &n2;
 
     cout << n1.data << " " << n2.data << endl;
     return 0;
