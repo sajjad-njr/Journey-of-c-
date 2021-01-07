@@ -13,3 +13,13 @@ public:
         next = NULL;
     }
 };
+
+void print(*head)
+{
+    while(head != NULL)
+    {
+        cout << head->data << " ";
+        head = head ->next ;
+    }
+    cout<<"NULL";
+}
