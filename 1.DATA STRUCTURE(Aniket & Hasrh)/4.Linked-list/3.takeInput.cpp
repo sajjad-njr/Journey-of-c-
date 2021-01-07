@@ -14,7 +14,7 @@ public:
     }
 };
 
-Node takeInput()
+Node* takeInput()
 {
     int data;
     cin>>data;
@@ -52,3 +52,10 @@ void print( Node *head)
     cout<<"NULL";
 }
 
+int main()
+{
+    Node *head = takeInput();
+    print(head);
+
+    return 0;
+}
