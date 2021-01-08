@@ -48,7 +48,7 @@ void insertFirst()
 
     first = (Node*)malloc(sizeof(Node));
     printf("\n\tEnter tha that wanna insert int first  = ");
-    scanf("%d",first->data);
+    scanf("%d",&first->data);
 
     first->next = head;
     head = first;
