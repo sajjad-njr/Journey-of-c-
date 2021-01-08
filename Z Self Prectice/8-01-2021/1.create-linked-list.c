@@ -20,8 +20,21 @@ void createNode()
 
     for(int i = 0 ; i < no ; i++)
     {
+        new_node = (Node*)malloc(sizeof(Node));
         printf("\n\tEnter the %d Node element = ",i+1);
         scanf("%d",&new_node->data);
+        new_node->next = NULL;
+
+        if(head == NULL)
+        {
+            head = temp = new_node;
+        }
+        else
+        {
+            temp->next = new_node;
+            temp = new_node;
+        }
+
     }
 
 }
