@@ -1,4 +1,4 @@
-#include<stdint.h>
+#include<stdio.h>
 #include<stdlib.h>
 
 typedef struct node
@@ -15,6 +15,7 @@ int main()
     n1 = (Node*)malloc(sizeof(Node));
     n2 = (Node*)malloc(sizeof(Node));
 
+    head = n1;
     n1->data = 2 ;
     n1->next = n2;
 
@@ -22,6 +23,10 @@ int main()
     n2->next = NULL;
 
 
-
+    while(head != NULL)
+    {
+        printf(" %d ",head->data);
+        head = head->next;
+    }
 
 }
