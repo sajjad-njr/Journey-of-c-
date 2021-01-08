@@ -3,19 +3,19 @@
 
 typedef struct node
 {
-    int data ; //data = info
+    int data ;
     struct node *next;
 
 } Node;
 
 Node *head, *new_node, *temp;
-int no ;
+
 //create linked list ;
 
 void createNode()
 {
     head = NULL ;
-
+    int no;
 
     printf("\n\tEnter the number of nodes = ");
     scanf("%d",&no);
@@ -42,7 +42,7 @@ void createNode()
 void traversList()
 {
     Node *avail;
-    avil = head;
+    avail = head;
 
     int num;
     printf("\n\tEnter a number that add with all element = ");
@@ -50,7 +50,13 @@ void traversList()
 
     while(avail != NULL)
     {
-        printf(" %d ",avail->data + nun);
+        printf(" %d ",avail->data + num);
         avail = avail ->next ;
     }
+}
+
+int main()
+{
+    createNode();
+    traversList();
 }
