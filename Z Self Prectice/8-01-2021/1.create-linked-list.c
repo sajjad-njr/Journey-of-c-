@@ -9,13 +9,14 @@ typedef struct node
 } Node;
 
 Node *head, *new_node, *temp;
+int no ;
 //create linked list ;
 
 void createNode()
 {
     head = NULL ;
 
-    int no ;
+
     printf("\n\tEnter the number of nodes = ");
     scanf("%d",&no);
 
@@ -51,9 +52,43 @@ void insertFirst()
 
 }
 
+void addPosition()
+{
+    int i = 1, po = 0 ;
+
+    Node *pos , *avail;
+
+    printf("\n\tEnter the position = ");
+    scanf("%d",&po);
+
+    if(po > no)
+    {
+       printf("\n\tError");
+
+    }
+
+    else
+    {
+       avail = head;
+        while( i < po - 1)
+        {
+            avail = avail->next;
+            i++;
+        }
+
+        pos = (Node*)malloc(sizeof(Node));
+        printf("\n\tEnter tha that wanna insert in the Position = ");
+        scanf("%d",&pos->data);
+        pos->next = avail->next;
+        avail->next = pos;
+
+    }
+
+}
+
 void addEnd()
 {
-    Node *end , *avail;
+    Node *end, *avail;
     end = (Node*)malloc(sizeof(Node));
 
     printf("\n\tEnter tha that wanna insert in the last = ");
@@ -89,6 +124,7 @@ int main()
 
     insertFirst();
 
+    addPosition();
     addEnd();
 
     prnitNode();
