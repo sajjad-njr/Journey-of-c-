@@ -62,6 +62,7 @@ void addEnd()
 
     printf("\n\tEnter tha that wanna insert int first  = ");
     scanf("%d",&end->data);
+    end->next = NULL;
     avail = head ;
 
     while(avail != NULL)
@@ -89,6 +90,10 @@ void prnitNode()
 int main()
 {
     createNode();
+
     insertFirst();
+
+    addEnd();
+
     prnitNode();
 }
