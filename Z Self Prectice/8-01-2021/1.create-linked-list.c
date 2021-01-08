@@ -3,12 +3,12 @@
 
 typedef struct node
 {
-   int data ;
-   struct node *next;
+    int data ;
+    struct node *next;
 
-}Node;
+} Node;
 
- Node *head , *new_node , *temp;
+Node *head, *new_node, *temp;
 //create linked list ;
 
 void createNode()
@@ -52,6 +52,23 @@ void insertFirst()
 
     first->next = head;
     head = first;
+
+}
+
+void addEnd()
+{
+    Node *end , *avail;
+    end = (Node*)malloc(sizeof(Node));
+
+    printf("\n\tEnter tha that wanna insert int first  = ");
+    scanf("%d",&end->data);
+    avail = head ;
+
+    while(avail != NULL)
+    {
+        avail = avail->next;
+    }
+    avail->next = end;
 
 }
 
