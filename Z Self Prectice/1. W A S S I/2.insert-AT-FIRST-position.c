@@ -5,37 +5,50 @@ typedef struct node
 {
     int data ;
     struct node *next ;
-}Node;
+} Node;
 
-int main()
+Node *head, *new_node, *temp;
+
+void createNode()
 {
-    Node *head , *new_node , *temp ;
-    Node *n1,*n2;
+    head = NULL ;
+    int no ;
+    printf("\n\tEnter the number of nodes = ");
+    scanf("%d",&no);
 
-    head =   (Node*)malloc(sizeof(Node));
-    n1 = (Node*)malloc(sizeof(Node));
-    n2 = (Node*)malloc(sizeof(Node));
-    new_node = (Node*)malloc(sizeof(Node));
-
-    printf("\n\tNew data ");
-    scanf("%d",&new_node->data);
-    new_node->next = head;
-    head = new_node;
-
-    head = n1;
-    n1->data = 2 ;
-    n1->next = n2;
-
-    n2->data = 3;
-    n2->next = NULL;
-
-    temp = head ;
-
-
-    while( temp != NULL)
+    for(int i = 0 ; i < no ; i++)
     {
-        printf(" %d ",temp->data);
-        temp = temp->next;
+        new_node = (Node*)malloc(sizeof(Node));
+        printf("\n\tEnter the %d Node element = ",i+1);
+        scanf("%d",&new_node->data);
+        new_node->next = NULL;
+
+        if(head == NULL)
+        {
+            head = temp = new_node;
+        }
+        else
+        {
+            temp->next = new_node;
+            temp = new_node;
+        }
+    }
+}
+
+void prnitNode()
+{
+    Node *ptr;
+    ptr = head ;
+
+    while(ptr != NULL)
+    {
+        printf(" %d ",ptr->data);
+        ptr = ptr->next;
     }
 
+}
+int main()
+{
+    createNode();
+    prnitNode();
 }
