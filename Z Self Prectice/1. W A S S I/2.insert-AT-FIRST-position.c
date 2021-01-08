@@ -34,7 +34,18 @@ void createNode()
         }
     }
 }
+void insertFirst()
+{
+    Node *first;
 
+    first = (Node*)malloc(sizeof(Node));
+    printf("\n\tEnter tha that wanna insert in the first = ");
+    scanf("%d",&first->data);
+
+    first->next = head;
+    head = first;
+
+}
 void prnitNode()
 {
     Node *ptr;
@@ -50,5 +61,6 @@ void prnitNode()
 int main()
 {
     createNode();
+    insertFirst();
     prnitNode();
 }
