@@ -7,11 +7,13 @@ typedef struct node
    struct node *next;
 
 }Node;
+
+ Node *head , *new_node , *temp;
 //create linked list ;
 
 void createNode()
 {
-    Node *head , *new_node;
+
     head = NULL ;
 
     int no ;
@@ -39,10 +41,10 @@ void createNode()
 
 }
 
-void pritNodeList()
+void prnitNode()
 {
     Node *ptr;
-    ptr = &head ;
+    ptr = head ;
 
     while(ptr != NULL)
     {
@@ -53,5 +55,6 @@ void pritNodeList()
 }
 int main()
 {
-
+    createNode();
+    prnitNode();
 }
