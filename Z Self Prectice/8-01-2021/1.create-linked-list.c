@@ -13,7 +13,6 @@ Node *head, *new_node, *temp;
 
 void createNode()
 {
-
     head = NULL ;
 
     int no ;
@@ -36,18 +35,15 @@ void createNode()
             temp->next = new_node;
             temp = new_node;
         }
-
     }
-
 }
 
 void insertFirst()
 {
     Node *first;
 
-
     first = (Node*)malloc(sizeof(Node));
-    printf("\n\tEnter tha that wanna insert int first  = ");
+    printf("\n\tEnter tha that wanna insert in the first = ");
     scanf("%d",&first->data);
 
     first->next = head;
@@ -60,12 +56,12 @@ void addEnd()
     Node *end , *avail;
     end = (Node*)malloc(sizeof(Node));
 
-    printf("\n\tEnter tha that wanna insert int first  = ");
+    printf("\n\tEnter tha that wanna insert in the last = ");
     scanf("%d",&end->data);
     end->next = NULL;
     avail = head ;
 
-    while(avail != NULL)
+    while(avail->next != NULL)
     {
         avail = avail->next;
     }
