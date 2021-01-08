@@ -39,15 +39,18 @@ void createNode()
     }
 }
 
+//traversing part
 void traversList()
 {
     Node *avail;
     avail = head;
 
+    // + ,-,/,* whatever want;
     int num;
     printf("\n\tEnter a number that add with all element = ");
     scanf("%d",&num);
 
+    printf("\n\tAfter add Num with nodes = ");
     while(avail != NULL)
     {
         printf(" %d ",avail->data + num);
