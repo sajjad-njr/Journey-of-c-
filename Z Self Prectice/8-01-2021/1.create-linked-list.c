@@ -41,6 +41,11 @@ void createNode()
 
 }
 
+void insertFirst()
+{
+
+}
+
 void prnitNode()
 {
     Node *ptr;
@@ -53,6 +58,8 @@ void prnitNode()
     }
 
 }
+
+
 int main()
 {
     createNode();
