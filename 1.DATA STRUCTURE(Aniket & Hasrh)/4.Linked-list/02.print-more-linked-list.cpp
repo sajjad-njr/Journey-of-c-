@@ -17,6 +17,15 @@ public:
 
 void printD(Node *head)
 {
+    Node *temp = head ;
+    while(temp != NULL)
+    {
+        cout <<  temp->data << " ";
+        temp =  temp -> next;
+    }
+
+    cout << endl;
+
     while(head != NULL)
     {
         cout << head->data << " ";
@@ -40,12 +49,12 @@ int  main()
     n4.next = &n5;
 
     printD(head);
-   /* while (head != NULL)
-    {
-        cout << head->data << endl;
-        head = head -> next;
-    }
-    */
+    /* while (head != NULL)
+     {
+         cout << head->data << endl;
+         head = head -> next;
+     }
+     */
 
     return 0;
 }
