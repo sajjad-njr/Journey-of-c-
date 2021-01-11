@@ -19,15 +19,25 @@ int  main()
 {
     //statistically
     Node n1(1);
-    Node n2(3);
-
-    n1.next = &n2;
-
     Node *head = &n1;
 
-    cout << head->data << endl;
+    Node n2(3);
+    Node n3(31);
+    Node n4(32);
+    Node n5(33);
 
-    cout << n1.data << " " << n2.data << endl;
+    n1.next = &n2;
+    n2.next = &n3;
+    n3.next = &n4;
+    n4.next = &n5;
+
+    while (head != NULL)
+    {
+        cout << head->data << endl;
+        head = head -> next;
+    }
+
+
     return 0;
 }
 
