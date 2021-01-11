@@ -15,6 +15,10 @@ public:
     }
 };
 
+void print(*head)
+{
+
+}
 int  main()
 {
     //statistically
@@ -31,12 +35,12 @@ int  main()
     n3.next = &n4;
     n4.next = &n5;
 
-    while (head != NULL)
+   /* while (head != NULL)
     {
         cout << head->data << endl;
         head = head -> next;
     }
-
+    */
 
     return 0;
 }
