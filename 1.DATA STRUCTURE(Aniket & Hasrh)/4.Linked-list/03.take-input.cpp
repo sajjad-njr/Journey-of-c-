@@ -46,22 +46,23 @@ void print(Node *head)
 
     while(temp != NULL)
     {
-        cout << temp->data << " " ;
+        cout << temp->data << "->" ;
         temp = temp->next;
     }
+    cout<<"NULL" <<endl;
 }
 
 int main()
 {
-   /* Node n1(90);
-    Node n2(45);
-    Node n3(34);
+    /* Node n1(90);
+     Node n2(45);
+     Node n3(34);
 
-    Node *head = &n1;
-    n1.next = &n2;
-    n2.next = &n3;
-    n3.next =  NULL;
-    */
+     Node *head = &n1;
+     n1.next = &n2;
+     n2.next = &n3;
+     n3.next =  NULL;
+     */
     Node *head = takeInput();
     print(head);
 
