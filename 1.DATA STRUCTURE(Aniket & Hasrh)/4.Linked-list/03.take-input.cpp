@@ -13,7 +13,7 @@ public:
     }
 };
 
-Node takeInput()
+Node* takeInput()
 {
     int num;
     cin>>num;
@@ -35,9 +35,10 @@ Node takeInput()
             tail->next = n ;
             tail = n;
         }
+        cin >> num;
     }
 
-
+    return head;
 }
 void print(Node *head)
 {
@@ -52,7 +53,7 @@ void print(Node *head)
 
 int main()
 {
-    Node n1(90);
+   /* Node n1(90);
     Node n2(45);
     Node n3(34);
 
@@ -60,6 +61,9 @@ int main()
     n1.next = &n2;
     n2.next = &n3;
     n3.next =  NULL;
-
+    */
+    Node *head = takeInput();
     print(head);
+
+    return 0;
 }
