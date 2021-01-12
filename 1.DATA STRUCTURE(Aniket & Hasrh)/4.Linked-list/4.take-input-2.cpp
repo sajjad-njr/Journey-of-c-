@@ -60,8 +60,9 @@ Node *takeInput2()
         }
         else
         {
-            n = head->next ;
-            n = head ;
+            n->next = head ;
+            head = n ;
+
         }
         cin>>num;
     }
