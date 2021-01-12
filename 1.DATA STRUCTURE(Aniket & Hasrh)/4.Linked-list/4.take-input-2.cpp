@@ -18,7 +18,7 @@ Node *takeInput()
 {
     int num;
     cin>>num ;
-    Node *head , *tail;
+    Node *head, *tail;
     head = NULL;
     tail = NULL;
 
@@ -41,6 +41,34 @@ Node *takeInput()
     return head;
 }
 
+Node *takeInput2()
+{
+    int num;
+    cin>>num ;
+    Node *head, *tail;
+    head = NULL;
+    tail = NULL;
+
+    while(num != -1)
+    {
+        Node *n = new Node(num);
+
+        if(head == NULL)
+        {
+            head = n;
+            tail = n ;
+        }
+        else
+        {
+            n = head->next ;
+            n = head ;
+        }
+        cin>>num;
+    }
+    return head;
+}
+
+
 void print(Node *head)
 {
     while(head != NULL)
@@ -55,6 +83,8 @@ int main()
 {
     Node *head = takeInput();
     print(head);
+    Node *rev = takeInput2();
+    print(rev);
 
     return 0;
 }
