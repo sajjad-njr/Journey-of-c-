@@ -16,15 +16,45 @@ public:
 
 Node *takeInput()
 {
-    int n;
-    cin>>n ;
+    int num;
+    cin>>num ;
     Node *head , *tail;
     head = NULL;
     tail = NULL;
 
-    while(n != -1)
+    while(num != -1)
     {
+        Node *n = new Node(num);
 
-        cin>>n;
+        if(head == NULL)
+        {
+            head = n;
+            tail = n ;
+        }
+        else
+        {
+            tail->next = n ;
+            tail = n ;
+        }
+        cin>>num;
     }
+    return head;
+}
+
+void print(Node *head)
+{
+    while(head != NULL)
+    {
+        cout<<head->data<<" -> " ;
+        head= head ->next;
+    }
+    cout << "NULL" << endl;
+}
+
+int main()
+{
+    Node *head = takeInput();
+    print(head);
+
+    return 0;
 }
