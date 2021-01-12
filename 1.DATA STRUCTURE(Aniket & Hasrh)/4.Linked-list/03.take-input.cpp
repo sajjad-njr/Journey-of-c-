@@ -13,6 +13,10 @@ public:
     }
 };
 
+Node takeInput()
+{
+
+}
 void print(Node *head)
 {
     Node *temp = head ;
@@ -23,6 +27,7 @@ void print(Node *head)
         temp = temp->next;
     }
 }
+
 int main()
 {
     Node n1(90);
