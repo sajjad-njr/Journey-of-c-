@@ -15,6 +15,28 @@ public:
 
 Node takeInput()
 {
+    int num;
+    cin>>num;
+
+    Node *head, *tail;
+    head = NULL;
+    tail = NULL;
+
+    while(num != -1)
+    {
+        Node *n = new Node(num);
+        if(head == NULL)
+        {
+            head = n ;
+            tail = n;
+        }
+        else
+        {
+            tail->next = n ;
+            tail = n;
+        }
+    }
+
 
 }
 void print(Node *head)
