@@ -77,7 +77,7 @@ void printIthNode(Node *head , int i)
         return ;
     }
     int pos = 1;
-    while(pos <= i - 1)
+    while(pos <= i)
     {
         head = head->next;
         pos++;
@@ -89,7 +89,7 @@ int main()
     Node *head = takeInput();
     int nt;
     cin>>nt ;
-    printIthNode(head , nt);
+    printIthNode(head , nt-1);
 
     //print(head,nt);
 
