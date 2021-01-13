@@ -41,45 +41,57 @@ Node *takeInput()
 
 }
 
-void print(Node *head,int n )
+void print(Node *head)
 {
-    int i, count = 0 ;
+
     Node *temp = head;
     while(temp != NULL)
     {
         cout << temp->data << " ";
-        count ++;
+
         temp = temp ->next;
 
     }
 
-    if(n > count)
-    {
-        cout <<endl<<  "The number is big than total element of Nodes " << endl;
-    }
-    else
-    {
-        while(i < count )
-        {
 
-            if(i == n)
-            {
-                cout << temp ->data << endl;
-                break;
-            }
-
-            i++;
-        }
-    }
 }
 
+int len(Node *head)
+{
+    int count = 0 ;
+    while(head != NULL)
+    {
+        count++;
+        head = head->next;
+    }
+    return count;
+}
+
+void printIthNode(Node *head , int i)
+{
+    int n = len(head);
+
+    if(i<0 || i > n-1)
+    {
+        cout << endl << "\tImpossible "<< endl;
+        return ;
+    }
+    int pos = 1;
+    while(pos <= i - 1)
+    {
+        head = head->next;
+        pos++;
+    }
+     cout<<head->data<<endl;
+}
 int main()
 {
     Node *head = takeInput();
-    int nt ;
+    int nt;
     cin>>nt ;
+    printIthNode(head , nt);
 
-    print(head,nt);
+    //print(head,nt);
 
     return 0;
 }
