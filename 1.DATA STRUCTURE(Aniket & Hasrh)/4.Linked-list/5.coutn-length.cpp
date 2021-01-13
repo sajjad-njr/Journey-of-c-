@@ -14,6 +14,16 @@ public:
     }
 };
 
+void print(Node head)
+{
+    while(head != NULL)
+    {
+        cout << head->data << " -> ";
+        head = head ->next;
+    }
+    cout <<"NULL"<< endl;
+}
+
 int main()
 {
     takeInput();
