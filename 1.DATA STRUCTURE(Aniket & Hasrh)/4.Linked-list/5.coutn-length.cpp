@@ -13,3 +13,11 @@ public:
         next = NULL;
     }
 };
+
+int main()
+{
+    takeInput();
+    print(head);
+
+    return 0;
+}
