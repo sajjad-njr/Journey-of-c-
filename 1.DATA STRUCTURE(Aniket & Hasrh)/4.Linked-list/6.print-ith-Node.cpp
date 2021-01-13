@@ -26,8 +26,10 @@ Node *takeInput()
         Node *new_node = new Node(num);
         if(head == NULL)
         {
-            head = new_node; tail = new_node;
-        }else
+            head = new_node;
+            tail = new_node;
+        }
+        else
         {
             tail->next = new_node;
             tail = new_node;
@@ -41,7 +43,7 @@ Node *takeInput()
 
 void print(Node *head,int n )
 {
-    int i , count = 0 ;
+    int i, count = 0 ;
     Node *temp = head;
     while(temp != NULL)
     {
@@ -57,11 +59,12 @@ void print(Node *head,int n )
     }
     else
     {
-        while(i <= count)
+        while(i < count )
         {
-            if(i==n)
+
+            if(i == n)
             {
-                cout << head ->data << endl;
+                cout << temp ->data << endl;
                 break;
             }
 
@@ -73,9 +76,10 @@ void print(Node *head,int n )
 int main()
 {
     Node *head = takeInput();
-    int n ; cin>>n ;
+    int nt ;
+    cin>>nt ;
 
-    print(head ,n);
+    print(head,nt);
 
     return 0;
 }
