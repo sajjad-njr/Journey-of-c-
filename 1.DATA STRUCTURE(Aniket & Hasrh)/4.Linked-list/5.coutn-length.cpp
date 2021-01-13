@@ -53,10 +53,22 @@ void print(Node *head)
     cout <<"NULL"<< endl;
 }
 
+void  countNode(Node *head)
+{
+    int cal = 0 ;
+    while(head != NULL)
+    {
+        //cout << head->n << " -> ";
+        cal++;
+        head = head ->next;
+    }
+    cout <<endl<<"Total Node in the list = "<<cal<< endl;
+}
 int main()
 {
     Node *head = takeInput();
     print(head);
+    countNode(head);
 
     return 0;
 }
