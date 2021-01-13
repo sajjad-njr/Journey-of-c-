@@ -78,6 +78,7 @@ int len(Node *head)
     }
     return count;
 }
+
 int main()
 {
     Node *head = takeInput();
