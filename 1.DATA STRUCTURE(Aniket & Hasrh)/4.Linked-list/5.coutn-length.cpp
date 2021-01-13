@@ -53,6 +53,8 @@ void print(Node *head)
     cout <<"NULL"<< endl;
 }
 
+//void type still working
+/*
 void  countNode(Node *head)
 {
     int cal = 0 ;
@@ -64,11 +66,26 @@ void  countNode(Node *head)
     }
     cout <<endl<<"Total Node in the list = "<<cal<< endl;
 }
+*/
+
+int len(Node *head)
+{
+    int count = 0 ;
+    while(head != NULL)
+    {
+        count++;
+        head = head->next;
+    }
+    return count;
+}
 int main()
 {
     Node *head = takeInput();
     print(head);
-    countNode(head);
+
+    cout<<len(head) << endl;
+
+    //countNode(head);
 
     return 0;
 }
