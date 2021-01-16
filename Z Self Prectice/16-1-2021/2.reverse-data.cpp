@@ -13,3 +13,15 @@ public:
         next = NULL;
     }
 };
+
+Node *takeInput()
+{
+    Node *head , *tail;
+
+    head = NULL;
+    tail = NULL;
+
+    cin>>n;
+
+
+}
