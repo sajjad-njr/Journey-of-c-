@@ -3,6 +3,7 @@ using namespace std;
 
 class Node
 {
+public:
     int data ;
     Node *next;
 
@@ -12,7 +13,36 @@ class Node
         next = NULL;
     }
 };
-int main()
+
+Node *takeInput()
 {
 
+    Node *head , *tail;
+    head = NULL;
+    tail = NULL;
+
+    int n ,m;
+    cin >>n;
+
+    while(n != -1)
+    {
+        Node *new_node  = new Node(m);
+
+        if(head == NULL)
+        {
+            head = new_node;
+            tail = new_node;
+        }
+        else
+        {
+            tail->next = new_node;
+            tail = new_node;
+        }
+        cin >> n;
+    }
+    return head ;
+}
+int main()
+{
+    takeInput();
 }
