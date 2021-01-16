@@ -23,5 +23,20 @@ Node *takeInput()
 
     cin>>n;
 
-
+    while(n != -1)
+    {
+        Node *new_node = new Node(n);
+        if(head == NULL)
+        {
+            head  = new_node;
+            tail = new_node;
+        }
+        else
+        {
+            tail->next = new_node;
+            tail = new_node;
+        }
+        cin>>n;
+    }
+    return head;
 }
