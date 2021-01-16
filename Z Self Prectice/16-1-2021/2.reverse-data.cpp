@@ -21,11 +21,11 @@ Node *takeInput()
     head = NULL;
     tail = NULL;
 
-    cin>>n;
+    cin>>num;
 
-    while(n != -1)
+    while(num != -1)
     {
-        Node *new_node = new Node(n);
+        Node *new_node = new Node(num);
         if(head == NULL)
         {
             head  = new_node;
@@ -36,7 +36,24 @@ Node *takeInput()
             tail->next = new_node;
             tail = new_node;
         }
-        cin>>n;
+        cin>>num;
     }
     return head;
+}
+
+void printj(Node *head)
+{
+    while(head != NULL)
+    {
+        cout << head->n << "->";
+        head = head->next;
+    }
+}
+
+int main()
+{
+    Node *j = takeInput();
+    printj(j);
+
+    return 0;
 }
