@@ -17,7 +17,7 @@ public:
 Node *takeInput()
 {
     Node *head , *tail;
-
+    int num;
     head = NULL;
     tail = NULL;
 
@@ -48,6 +48,7 @@ void printj(Node *head)
         cout << head->n << "->";
         head = head->next;
     }
+    cout<<"NULL"<<endl;
 }
 
 int main()
