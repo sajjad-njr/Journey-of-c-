@@ -21,12 +21,13 @@ Node *takeInput()
     head = NULL;
     tail = NULL;
 
-    int n ,m;
+    int n;
+
     cin >>n;
 
     while(n != -1)
     {
-        Node *new_node  = new Node(m);
+        Node *new_node  = new Node(n);
 
         if(head == NULL)
         {
