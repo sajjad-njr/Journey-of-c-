@@ -42,7 +42,18 @@ Node *takeInput()
     }
     return head ;
 }
+
+void print(Node *head)
+{
+    while(head != NULL)
+    {
+        cout << head->data << " -> ";
+        head = head->next;
+    }
+    cout << "NULL";
+}
 int main()
 {
-    takeInput();
+    Node *head = takeInput();
+    print(head);
 }
