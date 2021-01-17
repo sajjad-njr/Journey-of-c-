@@ -73,7 +73,7 @@ void iThposition(Node *head, int n )
         {
             head = head->next;
         }
-        cout << " The "<<n <<"th position value = " << head->data << endl;
+        cout << " The "<<n <<" th position value = " << head->data << endl;
     }
 
 }
@@ -81,6 +81,11 @@ int main()
 {
     Node *a = takeInput();
     output(a);
-    iThposition(a,3);
+
+    int b ;
+    cout<<"Enter the position number that wanna show = ";
+    cin>>b;
+
+    iThposition(a,b);
     return 0 ;
 }
