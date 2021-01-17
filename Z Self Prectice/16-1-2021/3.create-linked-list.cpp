@@ -13,3 +13,43 @@ public:
         next = NULL;
     }
 };
+
+Node *takeInput()
+{
+    Node *head , *tail;
+    head = NULL;
+    tail = NULL;
+
+    int num;
+    cin>>num;
+
+    while(num != -1)
+    {
+        Node *new_node = new Node(num);
+        if(head == NULL)
+        {
+            head = new_node;
+            tail = new_node;
+        }
+        else
+        {
+            tail->next = new_node;
+            tail = new_ node ;
+        }
+        cin >>num;
+    }
+    return head ;
+}
+
+void output(Node *h)
+{
+    while(h != NULL)
+    {
+        cout<< h->data << "->" ;
+        h = h->next;
+    }
+}
+int main()
+{
+
+}
