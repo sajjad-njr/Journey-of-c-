@@ -26,6 +26,7 @@ Node *takeInput()
     while(num != -1)
     {
         Node *new_node = new Node(num);
+
         if(head == NULL)
         {
             head = new_node;
@@ -34,7 +35,7 @@ Node *takeInput()
         else
         {
             tail->next = new_node;
-            tail = new_ node ;
+            tail = new_node ;
         }
         cin >>num;
     }
@@ -43,13 +44,19 @@ Node *takeInput()
 
 void output(Node *h)
 {
+
     while(h != NULL)
     {
         cout<< h->data << "->" ;
         h = h->next;
     }
+    cout<<"NULL"<<endl;
+
 }
 int main()
 {
+    Node *a = takeInput();
+    output(a);
 
+    return 0 ;
 }
