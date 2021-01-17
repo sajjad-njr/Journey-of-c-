@@ -16,7 +16,7 @@ public:
 
 Node *takeInput()
 {
-    Node *head , *tail;
+    Node *head, *tail;
     head = NULL;
     tail = NULL;
 
@@ -53,10 +53,34 @@ void output(Node *h)
     cout<<"NULL"<<endl;
 
 }
+void iThposition(Node *head, int n )
+{
+    int count = 0 ;
+    Node *avail = head ;
+    while( avail != NULL)
+    {
+        count++;
+        avail =  avail->next;
+    }
+
+    if(n>count || n < 0)
+    {
+        cout <<"Invalid position " << endl;
+    }
+    else
+    {
+        for(int j = 1 ; j <= n-1 ; j++)
+        {
+            head = head->next;
+        }
+        cout << " The "<<n <<"th position value = " << head->data << endl;
+    }
+
+}
 int main()
 {
     Node *a = takeInput();
     output(a);
-
+    iThposition(a,3);
     return 0 ;
 }
