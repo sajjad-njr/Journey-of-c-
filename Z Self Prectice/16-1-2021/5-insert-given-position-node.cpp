@@ -68,6 +68,10 @@ Node* insetGivenPosition(Node *head , int i, int data)
         newNode->next = avail->next;
         avail->next = newNode;
         */
+        Node *new_node = new Node(data);
+        Node *temp = avail->next;
+        avail->next = new_node;
+        new_node->next = temp;
 
         return head ;
 
