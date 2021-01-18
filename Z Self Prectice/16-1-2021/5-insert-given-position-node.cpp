@@ -40,31 +40,35 @@ Node* takeInput()
     return head ;
 }
 
-Node* insetGivenPosition(Node *head , int i , int data)
+Node* insetGivenPosition(Node *head , int i, int data)
 {
-    if(i<1)
+    i = i - 1;
+    if(i<0)
     {
         return head;
     }
-    if(i == 1)
+    if(i == 0)
     {
         Node *newNode = new Node(data);
         newNode->next = head;
         head = newNode;
         return head;
     }
-    int count = 2 ; // count = 1 then condition count i-1
+    int count = 1 ;
     Node *avail = head ;
-    while(count<= i && avail != NULL)
+    while(count<= i-1 && avail != NULL)
     {
         avail = avail->next;
         count++;
     }
     if(avail)
     {
+        /*
         Node *newNode = new Node(data);
         newNode->next = avail->next;
         avail->next = newNode;
+        */
+
         return head ;
 
     }
