@@ -41,7 +41,30 @@ Node *takeInput()
     }
     return head ;
 }
+void printIthPosotion(Node *head, int i)
+{
+    if(i<0)
+    {
+        cout<<"-1" <<endl;
+        return ;
+    }
+    int count = 1 ;
+    while(count <= i-1 && head != NULL)
+    {
+        head = head->next;
+        count++;
+    }
+    if(head)
+    {
+        cout<<head->data << endl;
 
+    }
+    else
+    {
+        cout<<"-1"<< endl;
+    }
+}
+/*
 
 Node *iThposition(Node *head, int n )
 {
@@ -74,12 +97,13 @@ Node *iThposition(Node *head, int n )
         cin>>val;
         newNode = new Node(val);
 
+
         t->next =  newNode;
        t = newNode;
     }
 
     return t;
-}
+}*/
 void output(Node *h)
 {
 
@@ -94,14 +118,14 @@ void output(Node *h)
 int main()
 {
     Node *a = takeInput();
-
+     output(a);
 
     int b ;
     cout<<"Enter the position number that wanna show = ";
     cin>>b;
 
-    iThposition(a,b);
+    //iThposition(a,b);
+    printIthPosotion(a,b);
 
-    output(a);
     return 0 ;
 }
