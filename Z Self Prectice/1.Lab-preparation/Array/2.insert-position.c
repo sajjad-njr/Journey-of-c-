@@ -3,21 +3,21 @@
 int main()
 {
     int size, position, value ;
-    printf("\nEnter the size of array = ");
+    printf("\n\tEnter the size of array = ");
     scanf("%d",&size);
 
     int a[size],i;
-    printf("\nEnter the size of array = ");
+    printf("\n\tEnter the size of array = ");
 
     for(i = 0 ; i < size ; i++)
     {
         scanf("%d",&a[i]);
     }
 
-    printf("\nEnter the value that insert = ");
+    printf("\n\tEnter the value that insert = ");
     scanf("%d",&value);
 
-    printf("\nEnter the position = ");
+    printf("\n\tEnter the position = ");
     scanf("%d",&position);
 
     for(int i = size-1 ; i >= position-1 ; i--)
@@ -28,6 +28,7 @@ int main()
     a[position-1] = value;
     size++;
 
+    printf("\n\tAfter Insert data new array = ");
     for(i = 0 ; i < size ; i++)
     {
         printf(" %d ",a[i]);  // if say add 5 all value (%d + 5);
