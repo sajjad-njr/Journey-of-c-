@@ -53,7 +53,7 @@ Node* insetGivenPosition(Node *head , int i , int data)
         head = newNode;
         return head;
     }
-    int count = 2 ;
+    int count = 2 ; // count = 1 then condition count i-1
     Node *avail = head ;
     while(count<= i && avail != NULL)
     {
