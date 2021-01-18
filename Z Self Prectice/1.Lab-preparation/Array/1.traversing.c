@@ -18,7 +18,7 @@ int main()
 
     for(i = 0 ; i < size ; i++)
     {
-        printf(" %d ",a[i]);
+        printf(" %d ",a[i]);  // if say add 5 all value (%d + 5);
     }
     return 0;
 }
