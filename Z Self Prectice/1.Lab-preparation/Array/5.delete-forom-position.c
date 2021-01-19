@@ -17,7 +17,7 @@ int main()
     printf("\n\tEnter the position that delete = ");
     scanf("%d",&position);
 
-    printf("\n\tAfter  delete data new array = ");
+
 
     if(position <= 0 || position > size)
     {
@@ -27,10 +27,12 @@ int main()
     {
         for(i = position - 1  ; i < size -1  ; i++)
         {
-             a[i] = a[i+1];  //  after position data move 1 position
+            a[i] = a[i+1];  //  after position data move 1 position
         }
         size--;
     }
+
+    printf("\n\tAfter  delete data new array = ");
 
     for(int j = 0 ; j < size ; j++)
     {
