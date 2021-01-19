@@ -8,7 +8,6 @@ int main()
 
     int a[size],i;
 
-
     for(i = 0 ; i < size ; i++)
     {
         scanf("%d",&a[i]);
@@ -16,8 +15,6 @@ int main()
 
     printf("\n\tEnter the position that delete = ");
     scanf("%d",&position);
-
-
 
     if(position <= 0 || position > size)
     {
