@@ -21,6 +21,9 @@ Node* takeInput()
     tail = NULL;
 
     int val; //val = value
+    cout<<" Enter -1 to stop the loop " <<endl;
+
+    cout << "Enter number as a node value = ";
     cin>>val;
     while(val != -1)
     {
@@ -95,6 +98,7 @@ int main()
 
     int c , d ;
     cout <<"Insert position and new value = ";
+
     cin >> c>>d;
     a = insetGivenPosition(a , c, d) ;
     output(a);
@@ -102,3 +106,4 @@ int main()
     return 0;
 
 }
+
