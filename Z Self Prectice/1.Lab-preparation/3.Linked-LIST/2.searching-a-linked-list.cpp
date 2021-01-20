@@ -42,19 +42,33 @@ Node* createNode()
     return head;
 }
 
-void print(Node *head)
+void  searchInList(Node *head , int data)
 {
     while(head != NULL)
     {
-        cout << head->data << "-> ";
+
+        int pos = 1 ;
+        if(data == head->data)
+        {
+             //cout << head->data << "-> ";
+
+             cout<<"Data found = " <<;
+             break;
+        }
         head = head -> next;
+        pos++;
     }
-    cout <<"NULL" << endl;
+
 }
 
 int main()
 {
     Node *h = createNode();
-    print(h);
+    int nu;
+    cout<<"Enter data that want to search = ";
+    cin>>nu;
+
+    searchInList(h , nu);
     return 0;
 }
+
