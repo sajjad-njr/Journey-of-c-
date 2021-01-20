@@ -44,19 +44,21 @@ Node* createNode()
 
 void  searchInList(Node *head , int data)
 {
+    int pos = 0;
+
     while(head != NULL)
     {
+        pos++;
 
-        int pos = 1 ;
         if(data == head->data)
         {
              //cout << head->data << "-> ";
-
-             cout<<"Data found = " <<;
+             cout<<"Data found = " <<pos;
              break;
         }
+
         head = head -> next;
-        pos++;
+
     }
 
 }
