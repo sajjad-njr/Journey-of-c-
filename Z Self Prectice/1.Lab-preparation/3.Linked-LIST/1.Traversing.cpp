@@ -22,4 +22,20 @@ Node* createNode()
     int num;
     cin>>num
 
+    while(num != -1)
+    {
+        Node *new_node = new Node(num);
+
+        if(head == NULL)
+        {
+            head = new_node;
+            tail  = new_node;
+        }
+        else
+        {
+            tail->next = new_node;
+            tail = new_node;
+        }
+        cin >> num;
+    }
 }
