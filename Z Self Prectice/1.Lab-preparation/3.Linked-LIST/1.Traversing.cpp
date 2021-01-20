@@ -38,4 +38,15 @@ Node* createNode()
         }
         cin >> num;
     }
+    return head;
 }
+
+void print(*head)
+{
+    while(head != NULL)
+    {
+        cout << head->data << "-> ";
+    }
+    cout <<"NULL" << endl;
+}
+
