@@ -32,11 +32,24 @@ Node* create()
         else
         {
             tail->next = new_node;
+            tail = new_node;
         }
     }
     return head;
 }
+
+void outPut(Node* h)
+{
+    while(h != NULL)
+    {
+        printf(" %d ",h->data);
+        h = h->next;
+    }
+}
 int main()
 {
-    create();
+   Node*a =  create();
+   outPut(a);
+
+   return 0;
 }
