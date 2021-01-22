@@ -17,3 +17,37 @@ void push(int x)
     top = new_node;
 
 }
+void pop()
+{
+    Node *temp;
+    temp = top;
+
+    if(top == 0)
+    {
+        printf("\n\tUnderflow ");
+    }
+    else
+    {
+        printf("\n\t %d",top->data);
+
+        top = top-next;
+        free(temp);
+    }
+}
+void display()
+{
+    if(top == 0)
+    {
+        printf("\n\tunderflow");
+    }
+    else
+    {
+        Node *temp = top;
+        while(temp != NULL)
+        {
+            printf(" %d ",temp->data);
+            temp = temp -> next ;
+        }
+    }
+}
+
