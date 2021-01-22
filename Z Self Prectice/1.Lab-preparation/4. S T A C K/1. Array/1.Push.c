@@ -21,9 +21,6 @@ void push()
 }
 void display()
 {
-
-
-
     int i ;
     for(i = Top ; i >=0 ; i--)
     {
@@ -35,11 +32,23 @@ void display()
 int main()
 {
     int n ;
-    scanf("%d",&n);
+    //scanf("%d",&n);
 
-    while(n--)
+    do
     {
-        push();
-    }
-    display();
+        printf("\n\tEnter choice 1.PUSH 2.DISPALY = ");
+        scanf("%d",&n);
+
+        switch(n)
+        {
+        case 1:
+            push();
+            break;
+        case 2 :
+            display();
+            break;
+        default:
+            printf("\n\tWrong Input ");
+        }
+    }while(n!= 0);
 }
