@@ -1,13 +1,13 @@
 #include<stdio.h>
 #include<stdlib.h>
-Node *top = 0;
+
 typedef struct node
 {
     int data;
     struct node *next ;
 
-}NOde;
-
+}Node;
+Node *top = 0;
 void push(int x)
 {
 
@@ -20,34 +20,45 @@ void push(int x)
 void pop()
 {
     Node *temp;
-    temp = top;
-
-    if(top == 0)
+     temp = top;
+    if(top== 0)
     {
         printf("\n\tUnderflow ");
     }
     else
     {
-        printf("\n\t %d",top->data);
-
-        top = top-next;
+        //printf("\n\t%d ",temp->data);
+        top = top->next;
         free(temp);
     }
 }
 void display()
 {
+      Node *temp = top;
     if(top == 0)
     {
-        printf("\n\tunderflow");
+        printf("\n\tNode empty ");
     }
     else
     {
-        Node *temp = top;
-        while(temp != NULL)
+
+        while(temp != 0)
         {
             printf(" %d ",temp->data);
-            temp = temp -> next ;
+            temp = temp->next ;
         }
     }
 }
 
+int main()
+{
+    push(100);
+
+    push(230);
+    //push(5);
+    pop();
+
+    display();
+
+    return 0;
+}
