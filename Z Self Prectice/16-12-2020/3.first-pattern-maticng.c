@@ -28,7 +28,10 @@ int main()
             printf("\n\tThe patter is match = %d",k);
         }
     }
-
-    printf(" %d %d ",str1_len,str2_len);
+    if(l != str2_len )
+    {
+        printf("\n\tThe patter is not match ");
+    }
+    //printf(" %d %d ",str1_len,str2_len);
     return 0;
 }
