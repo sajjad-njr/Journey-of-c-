@@ -11,6 +11,13 @@ int main()
     str1_len = strlen(str1);
     str2_len = strlen(str2);
 
+    int k = 0, max = str1_len - str2_len ;
+
+    while(k < max)
+    {
+
+    }
+
     printf(" %d %d ",str1_len,str2_len);
     return 0;
 }
