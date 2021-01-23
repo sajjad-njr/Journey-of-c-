@@ -11,11 +11,22 @@ int main()
     str1_len = strlen(str1);
     str2_len = strlen(str2);
 
-    int k = 0, max = str1_len - str2_len ;
+    int  l , k = 0, max = str1_len - str2_len ;
 
-    while(k < max)
+    while(k <= max)
     {
+       for(l = 0 ; l < str1_len ; l++)
+       {
+           if(str2[l] != [k + l - 1])
+           {
+               k++;
+               break;
+           }
+       }
+       if(l == str2_len )
+       {
 
+       }
     }
 
     printf(" %d %d ",str1_len,str2_len);
