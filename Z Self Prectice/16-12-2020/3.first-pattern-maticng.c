@@ -6,4 +6,6 @@ int main()
     char str1[100],str2[100];
     int str_len , str2_len;
 
+    gets(str1);
+    gets(str2);
 }
