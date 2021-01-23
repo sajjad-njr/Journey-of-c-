@@ -17,7 +17,7 @@ int main()
     {
        for(l = 0 ; l < str1_len ; l++)
        {
-           if(str2[l] != [k + l - 1])
+           if(str2[l] != str1[k + l - 1])
            {
                k++;
                break;
