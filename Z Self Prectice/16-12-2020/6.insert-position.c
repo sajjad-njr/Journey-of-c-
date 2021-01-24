@@ -54,8 +54,11 @@ void *insertPosi()
         while(i < posi)
         {
             temp = temp->next;
+            i++;
         }
+
         new_node = (Node*) malloc(sizeof(Node));
+
         printf("\n\tInter new Node = ");
         scanf("%d",&new_node->data);
         new_node->next = temp->next;
