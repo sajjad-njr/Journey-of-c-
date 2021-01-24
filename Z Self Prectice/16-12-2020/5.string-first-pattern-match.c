@@ -11,6 +11,8 @@ int main()
 
     int max = str1_len - str2_len ;
 
+    printf("\n\tTotal len = %d",max);
+    return 0;
 
 }
 
