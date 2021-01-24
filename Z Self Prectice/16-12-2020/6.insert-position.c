@@ -6,7 +6,8 @@ typedef struct node
     int data;
     struct node *next;
 }Node;
-
+int len = 0;
+Node *head , *temp , *new_node;
 Node *createNode()
 {
     Node *head = NULL;
@@ -33,9 +34,35 @@ Node *createNode()
             tail = new_node;
         }
     }
-
+    len = i;
     return head;
 }
+void *insertPosi()
+{
+    int posi;
+    printf("\n\tEnter the position = ");
+    scanf("%d",&posi);
+
+    if(pos > len)
+    {
+        printf("\n\tInvalid position ");
+    }
+    else
+    {
+        int i = 0 ;
+        temp = head;
+        while(i < pos)
+        {
+            temp = tem->next;
+        }
+        new_node = (Node*) malloc(Node);
+        printf("\n\tInter new Node = ");
+        scanf("%d",&new_node->data);
+        new_node->next = temp->next;
+        temp->next = new_node;
+    }
+}
+
 void pri(Node *head)
 {
     while(head != NULL)
@@ -47,6 +74,9 @@ void pri(Node *head)
 int main()
 {
     Node *a = createNode();
+
+    insertPosi();
+
     pri(a);
 
     return 0;
