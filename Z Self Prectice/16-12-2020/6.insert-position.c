@@ -36,8 +36,18 @@ Node *createNode()
 
     return head;
 }
-
+void pri(Node *head)
+{
+    while(head != NULL)
+    {
+        printf(" %d ",head->data);
+        head = head->next;
+    }
+}
 int main()
 {
+    Node *a = createNode();
+    pri(a);
 
+    return 0;
 }
