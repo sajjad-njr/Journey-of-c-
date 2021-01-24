@@ -43,7 +43,7 @@ void *insertPosi()
     printf("\n\tEnter the position = ");
     scanf("%d",&posi);
 
-    if(pos > len)
+    if(posi > len)
     {
         printf("\n\tInvalid position ");
     }
@@ -51,11 +51,11 @@ void *insertPosi()
     {
         int i = 0 ;
         temp = head;
-        while(i < pos)
+        while(i < posi)
         {
-            temp = tem->next;
+            temp = temp->next;
         }
-        new_node = (Node*) malloc(Node);
+        new_node = (Node*) malloc(sizeof(Node));
         printf("\n\tInter new Node = ");
         scanf("%d",&new_node->data);
         new_node->next = temp->next;
