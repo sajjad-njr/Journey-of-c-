@@ -7,7 +7,19 @@ typedef struct node
     struct node *next;
 }Node;
 
+Node *createNode()
+{
+    Node *head = NULL;
+    Node *tail =  NULL;
+    printf("\n\tEnter Node number = ");
+    int i;
+    scanf("%d",&i);
 
+    while(i--)
+    {
+
+    }
+}
 int main()
 {
 
