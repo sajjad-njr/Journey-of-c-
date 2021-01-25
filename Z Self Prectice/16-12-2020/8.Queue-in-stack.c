@@ -32,7 +32,7 @@ void show()
     }
     else
     {
-        for(i = front ; i < rare+1 ; i++)
+        for(int i = front ; i < rare+1 ; i++)
         {
             printf(" %d ",queue[i]);
         }
@@ -40,9 +40,9 @@ void show()
 }
 int main()
 {
-    enqueue(34);
-    enqueue(334);
-    enqueue(2334);
+    enque(34);
+    enque(334);
+    enque(2334);
     show();
 
     return 0;
