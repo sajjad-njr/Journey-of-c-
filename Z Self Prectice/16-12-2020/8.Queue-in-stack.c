@@ -8,7 +8,7 @@ int rare = -1;
 
 void enque(int x)
 {
-    if(rear = N - 1)
+    if(rare == N - 1)
     {
         printf("\n\tOverflow ");
     }
@@ -37,4 +37,14 @@ void show()
             printf(" %d ",queue[i]);
         }
     }
+}
+int main()
+{
+    enqueue(34);
+    enqueue(334);
+    enqueue(2334);
+    show();
+
+    return 0;
+
 }
