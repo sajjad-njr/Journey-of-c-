@@ -24,6 +24,22 @@ void enque(int x)
     }
 }
 
+void deque()
+{
+    if(front == -1 && rare == -1)
+    {
+        printf("\n\tUNDERFLOW");
+    }
+    else if(front == rare)
+    {
+        front = rare = -1;
+    }
+    else
+    {
+        printf("\n\tRemove data = %d\n",queue[front]);
+        front++;
+    }
+}
 void show()
 {
     if(front == -1 && rare == -1)
@@ -32,6 +48,7 @@ void show()
     }
     else
     {
+        printf("\n Queue data = ");
         for(int i = front ; i < rare+1 ; i++)
         {
             printf(" %d ",queue[i]);
@@ -43,6 +60,10 @@ int main()
     enque(34);
     enque(334);
     enque(2334);
+     show();
+
+    deque();
+    deque();
     show();
 
     return 0;
