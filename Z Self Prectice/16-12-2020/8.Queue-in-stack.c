@@ -23,3 +23,18 @@ void enque(int x)
         queue[rare] = x;
     }
 }
+
+void show()
+{
+    if(front == -1 && rare == -1)
+    {
+        printf("\n\tQUEUE is empty");
+    }
+    else
+    {
+        for(i = front ; i < rare+1 ; i++)
+        {
+            printf(" %d ",queue[i]);
+        }
+    }
+}
