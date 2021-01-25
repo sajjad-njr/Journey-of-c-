@@ -20,7 +20,7 @@ int main()
     {
         for( l = 0 ; l < str1_len ; l++)
         {
-            if(str2[l] != str1[k + l - 1])
+           if(str2[l] != str1[k + l - 1])
             {
                 k++;
                 break;
@@ -28,7 +28,8 @@ int main()
         }
         if(l == str2_len)
         {
-            printf("\n\tPattern is found in the position = %d",k);
+            printf("\n\tPattern is found in the position = %d",k-1);
+            break;
         }
     }
 
