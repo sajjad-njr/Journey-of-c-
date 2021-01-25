@@ -20,12 +20,25 @@ void push(int x)
 
 }
 
-void display()
+void displayS()
 {
     Node *temp = top;
     if(top == 0)
     {
+        printf("\n\tStack is empty ");
+    }
+    while(temp != 0)
+    {
+        printf(" %d ",temp->data);
+        temp = temp->next;
     }
 }
 
-int ma
+int main()
+{
+    push(2);
+    push(23);
+    push(232);
+    displayS();
+    return 0;
+}
