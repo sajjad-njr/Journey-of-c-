@@ -20,6 +20,21 @@ void push(int x)
 
 }
 
+void pop()
+{
+    Node *temp = top;
+
+    if(top == 0)
+    {
+        printf("\n\tUnderflow");
+    }
+    else
+    {
+        top = top->next;
+        free(temp);
+    }
+}
+
 void displayS()
 {
     Node *temp = top;
@@ -39,6 +54,7 @@ int main()
     push(2);
     push(23);
     push(232);
+    pop();
     displayS();
     return 0;
 }
