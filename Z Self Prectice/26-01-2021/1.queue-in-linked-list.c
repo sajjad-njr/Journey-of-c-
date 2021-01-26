@@ -6,7 +6,7 @@ typedef struct node
     int data;
     struct node *next;
 
-}Node;
+} Node;
 
 Node *front = 0;
 Node *rare = 0;
@@ -29,6 +29,22 @@ void enqueue(int x)
         rare = new_node;
     }
 }
+void deque()
+{
+    Node *temp;
+
+    if(front ==0 && rare == 0)
+    {
+        printf("\n\tUnderflow");
+    }
+    else
+    {
+        temp = front ;
+        front = front->next;
+        free(temp);
+    }
+}
+
 void display()
 {
     Node *temp ;
@@ -53,6 +69,15 @@ int main()
     enqueue(45);
     enqueue(3);
     enqueue(100);
+   // deque();
+   // deque();
+
+    display();
+
+    printf("\n\t");
+    enqueue(4554);
+    enqueue(3463);
+    enqueue(13400);
 
     display();
     return 0;
