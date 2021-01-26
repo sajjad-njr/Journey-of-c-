@@ -16,7 +16,7 @@
     printf("\n\tEnter total Number of Node = ");
     scanf("%d",&num);
 
-    while(num--)
+    while( num != 0)
     {
         Node *new_node = (Node*)malloc(sizeof(Node));
         printf("\n\tEnter Node value = ");
@@ -36,6 +36,7 @@
     }
     return head;
 }
+
 
 int main()
 {
