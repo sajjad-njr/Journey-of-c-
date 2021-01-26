@@ -16,9 +16,9 @@ void enqueue(int x)
     Node *new_node = (Node*)malloc(sizeof(Node));
 
     new_node->data = x;
-    new_node = 0;
+    new_node->next = 0;
 
-    if(front = rare = 0)
+    if(front ==0 && rare == 0)
     {
         front = new_node;
         rare = new_node;
@@ -33,7 +33,7 @@ void display()
 {
     Node *temp ;
 
-    if(front = rare = 0)
+    if(front ==0 && rare == 0)
     {
         printf("\n\tQueue is EMPTY");
     }
