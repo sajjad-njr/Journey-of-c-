@@ -23,4 +23,27 @@ void enqueue(int x)
         front = new_node;
         rare = new_node;
     }
+    else
+    {
+        rare->next = new_node;
+        rare = new_node;
+    }
+}
+void display()
+{
+    Node *temp ;
+
+    if(temp = rare = 0)
+    {
+        printf("\n\tQueue is EMPTY");
+    }
+    else
+    {
+        temp = front;
+        while( temp != NULL)
+        {
+            printf(" %d ",temp->data);
+            temp = temp->next;
+        }
+    }
 }
