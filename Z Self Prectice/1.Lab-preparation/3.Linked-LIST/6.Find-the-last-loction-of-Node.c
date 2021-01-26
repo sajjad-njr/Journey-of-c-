@@ -1,13 +1,13 @@
 #include<stdio.h>
 #include<stdlib.h>
 
- typedef struct node
- {
-     int data;
-     struct node *next;
- }Node;
+typedef struct node
+{
+    int data;
+    struct node *next;
+} Node;
 
- Node *createNode()
+Node *createNode()
 {
     Node *head = NULL;
     Node *tail = NULL;
@@ -37,9 +37,21 @@
     return head;
 }
 
+void display(Node *head)
+{
+    int posi = 0;
 
+    while(head != NULL)
+    {
+
+        posi++;
+        head= head->next;
+
+    }
+    printf("\n\tLast node position = %d",posi);
+}
 int main()
 {
     Node *a = createNode();
-
+    display(a);
 }
