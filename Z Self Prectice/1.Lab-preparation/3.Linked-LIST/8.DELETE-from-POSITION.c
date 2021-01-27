@@ -49,7 +49,7 @@ void *Delete_from_position()
 
     int i = 1 , position;
 
-    printf("\n\tEnter the position = ");
+    printf("\n\tEnter Delete NODE the position = ");
     scanf("%d",&position);
 
     while( i < position - 1 )
@@ -79,7 +79,7 @@ int main()
 {
     Node *list = createNode();
 
-    Delete_from_position(list);
+    Delete_from_position();
 
     display(list);
 }
