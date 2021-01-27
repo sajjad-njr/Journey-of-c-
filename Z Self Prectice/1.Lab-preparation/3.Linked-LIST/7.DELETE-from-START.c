@@ -1,4 +1,4 @@
-#include<stdlib.h>
+#include<stdio.h>
 #include<stdlib.h>
 
 typedef struct node
@@ -13,12 +13,12 @@ Node *tail = NULL;
 //linked List CREATE
 Node *createNode()
 {
-    Node *head = NULL;
-    Node *tail = NULL;
+    //Node *head = NULL;
+    //Node *tail = NULL;
 
     int num;
 
-    printf("\n\tEnter  (-1) to stop the Linked List =  ");
+    printf("\n\tEnter -1 to stop the Linked List =  ");
     scanf("%d",&num);
 
     while( num != -1)
@@ -44,7 +44,7 @@ Node *createNode()
     return head;
 }
 
-void Delete_from_start()
+Node *Delete_from_start()
 {
     Node *temp;
     temp = head;
@@ -52,6 +52,7 @@ void Delete_from_start()
     head = head->next;
     // free use ro clear garbage value
     free(temp);
+    return head;
 }
 void display(Node *avail)
 {
@@ -62,4 +63,10 @@ void display(Node *avail)
         avail = avail->next;
     }
 
+}
+int main()
+{
+    Node *list = createNode();
+    list = Delete_from_start();
+    display(list);
 }
