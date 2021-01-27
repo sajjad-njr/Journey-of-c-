@@ -42,7 +42,7 @@ Node *createNode()
 }
 
 //delete from first position
-void*Delete_from_position()
+void *Delete_from_position()
 {
     Node *temp ,*avail;
      temp = head;
@@ -61,7 +61,7 @@ void*Delete_from_position()
     temp ->next = avail->next;
     free(avail);
 
-    return temp;
+    //return temp;
 }
 // output show linked list
 void display(Node *avail)
