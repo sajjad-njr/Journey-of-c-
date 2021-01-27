@@ -44,6 +44,7 @@ Node *createNode()
     return head;
 }
 
+//delete from first position
 Node *Delete_from_start()
 {
     Node *temp;
@@ -54,6 +55,7 @@ Node *Delete_from_start()
     free(temp);
     return head;
 }
+// output show linked list
 void display(Node *avail)
 {
 
@@ -64,9 +66,12 @@ void display(Node *avail)
     }
 
 }
+
 int main()
 {
     Node *list = createNode();
+
     list = Delete_from_start();
+
     display(list);
 }
