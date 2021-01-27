@@ -40,7 +40,7 @@ Node *createNode()
     }
     return head;
 }
-
+// For out put show
 void display(Node *head)
 {
     int posi = 0;
@@ -50,7 +50,7 @@ void display(Node *head)
         posi++;
         head = head->next;
     }
-    printf("\n\tLast node position = %d",posi);
+    printf("\n\tThe Last position of NODE = %d",posi);
 }
 int main()
 {
