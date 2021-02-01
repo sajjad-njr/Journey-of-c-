@@ -3,15 +3,15 @@ using namespace std;
 
 int main()
 {
-    int a,b,c;
+    int a,b,c , x;
 
     cin>>a>>b>>c;
 
-    int x = (a+b+abs(a-b))/2;
+     x = (a+b+abs(a-b))/2;
 
-    int abc = (x+c+abs(x-c))/2;
+    x = (x+c+abs(x-c))/2;
 
-    cout << abc;
+    cout << x;
 
     return 0;
 }
