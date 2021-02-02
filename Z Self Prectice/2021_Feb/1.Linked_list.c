@@ -16,6 +16,10 @@ Node *takeInput()
 
     while(n--)
     {
+        new_node = (Node*) malloc(sizeof(Node));
+        printf("\n\tEnter Node item = ");
+        scanf("%d",&new_node->data);
+        new_node->next = null;
 
     }
 }
