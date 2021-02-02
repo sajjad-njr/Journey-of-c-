@@ -4,14 +4,14 @@ typedef struct node
 {
     int data;
     struct node *next;
-}Node;
-Node *head , *tail;
+} Node;
+Node *head, *tail;
 
 Node *takeInput()
 {
     Node *new_node ;
-    head = null;
-    tail = null;
+    head = NULL;
+    tail = NULL;
 
     int n ;
     scanf("%d",&n);
@@ -21,13 +21,19 @@ Node *takeInput()
         new_node = (Node*) malloc(sizeof(Node));
         printf("\n\tEnter Node item = ");
         scanf("%d",&new_node->data);
-        new_node->next = null;
+        new_node->next = NULL;
 
+         if(head == NULL)
+    {
+        head = new_node;
+        tail = new_node;
     }
-    if(head == null)
+    }
+
+    return head;
 }
 
 int main()
 {
-
+    Node *a = takeInput();
 }
