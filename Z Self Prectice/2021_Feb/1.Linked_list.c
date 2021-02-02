@@ -10,6 +10,8 @@ Node *head , *tail;
 Node *takeInput()
 {
     Node *new_node ;
+    head = null;
+    tail = null;
 
     int n ;
     scanf("%d",&n);
@@ -22,6 +24,7 @@ Node *takeInput()
         new_node->next = null;
 
     }
+    if(head == null)
 }
 
 int main()
