@@ -23,17 +23,31 @@ Node *takeInput()
         scanf("%d",&new_node->data);
         new_node->next = NULL;
 
-         if(head == NULL)
-    {
-        head = new_node;
-        tail = new_node;
-    }
+        if(head == NULL)
+        {
+            head = new_node;
+            tail = new_node;
+        }
+        else
+        {
+            tail->next = new_node;
+            tail = new_node;
+        }
     }
 
     return head;
 }
 
+void printttt(Node *a)
+{
+    while( a != NULL)
+    {
+        printf(" %d ",a->data);
+        a = a->next;
+    }
+}
 int main()
 {
     Node *a = takeInput();
+     printttt(a);
 }
