@@ -4,7 +4,7 @@ int main()
 {
     int a,b;
     cin>>a>>b;
-     float c = a*b;
+     double c = a*b;
 
-    cout<< setprecision(6) <<c/12;
+    cout<< fixed<<setprecision(3)<<c/12;
 }
