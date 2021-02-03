@@ -50,8 +50,11 @@ int main()
 {
     Node *a = takeInput();
      Node *temp = a;
-
-
-    printttt(a);
+     while(temp != NULL)
+     {
+         temp = temp->next;
+     }
+    temp = temp->next;
+    printttt(temp);
 }
 
