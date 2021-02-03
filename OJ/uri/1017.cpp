@@ -6,6 +6,6 @@ int main()
     cin>>a>>b;
     double c = a*b;
 
-    cout<< fixed<<setprecision(3)<<c/12;
+    cout<< fixed<<setprecision(3)<<c/12<<endl;
     return 0;
 }
