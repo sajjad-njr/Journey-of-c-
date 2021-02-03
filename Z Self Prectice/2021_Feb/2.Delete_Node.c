@@ -49,6 +49,9 @@ void printttt(Node *a)
 int main()
 {
     Node *a = takeInput();
-     printttt(a);
+     Node *temp = a;
+
+
+    printttt(a);
 }
 
