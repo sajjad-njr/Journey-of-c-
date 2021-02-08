@@ -18,6 +18,7 @@ Node *create()
     if(x == -1)
     {
        return 0;
+
     }
     new_node->data = x ;
     printf("\nEnter the left child of = %d",x);
@@ -33,12 +34,12 @@ void post_order(Node *root)
 {
     if(root == 0)
     {
-        return 0;
+        return ;
     }
     post_order(root->left);
     post_order(root->right);
 
-    printf(" %d ",data);
+    printf(" %d ",root->data);
 }
 
 int main()
