@@ -23,4 +23,13 @@ Node *create()
     printf("\nEnter the left child of = %d",x);
     new_node->left = create();
 
+    printf("\nEnter the  right child of = %d",x);
+    new_node->right = create();
+
+    return new_node;
+}
+
+int main()
+{
+
 }
