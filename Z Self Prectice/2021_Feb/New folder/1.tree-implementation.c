@@ -29,8 +29,22 @@ Node *create()
     return new_node;
 }
 
+void post_order(Node *root)
+{
+    if(root == 0)
+    {
+        return 0;
+    }
+    post_order(root->left);
+    post_order(root->right);
+
+    printf(" %d ",data);
+}
+
 int main()
 {
     Node *root = create();
+
+    post_order(root);
 
 }
