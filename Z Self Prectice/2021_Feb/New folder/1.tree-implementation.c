@@ -31,5 +31,6 @@ Node *create()
 
 int main()
 {
+    Node *root = create();
 
 }
