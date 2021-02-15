@@ -5,7 +5,7 @@ typedef struct node
 {
     int data;
     struct node *next;
-}Node;
+} Node;
 
 Node *head, *tail;
 
@@ -20,7 +20,7 @@ Node *creteNode()
     {
         Node *new_node =(Node*)malloc(sizeof(Node));
         printf("\n\tEnter The value of Node = ");
-        scanf("%d",new_node->data);
+        scanf("%d",&new_node->data);
         new_node->next = NULL;
 
         if(head == NULL)
@@ -30,20 +30,20 @@ Node *creteNode()
         }
         else
         {
-            tail = tail->next;
-            tail = new_node;
+            tail->next = new_node ;
+            tail =  new_node;
 
         }
     }
     return head;
 }
 
-void p(Node *head)
+void p(Node *q)
 {
-    while(head != NULL)
+    while( q != NULL)
     {
-        printf(" %d ",head->data);
-        head = head->next;
+        printf(" %d ",q->data);
+        q = q->next;
     }
 }
 
