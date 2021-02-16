@@ -12,9 +12,8 @@ Node *head, *tail;
 Node *createNode()
 {
     int n;
-    printf("Enter the value for stop -1 = ");
+    printf("\n\tEnter the value for stop (-1)\n");
     scanf("%d",&n);
-    //Node *head, *tail;
 
     head = NULL;
     tail = NULL;
@@ -22,8 +21,7 @@ Node *createNode()
     while(n != -1)
     {
         Node *new_node = (Node*) malloc(sizeof(Node));
-        // printf("\n\tEnter the value = ");
-        // scanf("%d",&new_node->data);
+
         new_node->data = n;
         new_node->next = NULL;
 
@@ -47,11 +45,9 @@ Node *insertFirst( )
     Node *avail ;
 
     avail = (Node*)malloc(sizeof(Node));
-    //avail= head;
 
     printf("\n\tEnter  First Position Node  the value = ");
     scanf("%d",&avail->data);
-    //new_node->data = n;
     avail->next = NULL;
 
     if( head == NULL)
@@ -66,6 +62,26 @@ Node *insertFirst( )
     return head;
 }
 
+Node *insertLast()
+{
+    Node *avail ;
+    Node *new_node = (Node*)malloc(sizeof(Node));
+
+    printf("\n\tEnter Last Position Node  the value = ");
+    scanf("%d",&new_node->data);
+    new_node->next = NULL;
+
+    avail = head ;
+
+    while(avail->next != NULL)
+    {
+        avail = avail->next;
+    }
+    avail->next = new_node;
+
+
+    return head;
+}
 void p(Node *q)
 {
     while( q != NULL)
@@ -80,6 +96,9 @@ int main()
     Node *i = createNode();
 
     i = insertFirst();
+    p(i);
+
+    i = insertLast();
 
     p(i);
 
