@@ -5,23 +5,23 @@ typedef struct node
 {
     int data;
     struct node *next;
-}Node;
-int len = 0;
-Node *head , *temp , *new_node;
-Node *createNode()
-{
-    Node *head = NULL;
-    Node *tail =  NULL;
-    printf("\n\tEnter Node number = ");
-    int i;
-    scanf("%d",&i);
-     printf("\n\tEnter node value = ");
-    while(i--)
-    {
-        Node *new_node = (Node*) malloc(sizeof(Node));
+} Node;
 
+Node *head, *tail;
+
+Node *creteNode()
+{
+    head = NULL;
+    tail = NULL;
+
+    int n;
+    scanf("%d",&n);
+    while(n--)
+    {
+        Node *new_node =(Node*)malloc(sizeof(Node));
+        printf("\n\tEnter The value of Node = ");
         scanf("%d",&new_node->data);
-        new_node->next =  NULL;
+        new_node->next = NULL;
 
         if(head == NULL)
         {
@@ -30,11 +30,11 @@ Node *createNode()
         }
         else
         {
-            tail->next = new_node;
-            tail = new_node;
+            tail->next = new_node ;
+            tail =  new_node;
+
         }
     }
-    len = i;
     return head;
 }
 void *insertPosi()
@@ -74,13 +74,20 @@ void pri(Node *head)
         head = head->next;
     }
 }
+
+void p(Node *q)
+{
+    while( q != NULL)
+    {
+        printf(" %d ",q->data);
+        q = q->next;
+    }
+}
+
 int main()
 {
-    Node *a = createNode();
-
-    insertPosi();
-
-    pri(a);
+    Node *i = creteNode();
+    p(i);
 
     return 0;
 }
