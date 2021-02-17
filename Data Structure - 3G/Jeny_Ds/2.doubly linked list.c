@@ -39,9 +39,11 @@ Node *createList()
     }
     return head;
 }
+
 void pi(Node *a)
 {
     a = head;
+
     while( a != NULL)
     {
         printf(" %d ",a->data);
@@ -51,6 +53,7 @@ void pi(Node *a)
 int main()
 {
     Node *c = createList();
+
     pi(c);
 
     return 0;
