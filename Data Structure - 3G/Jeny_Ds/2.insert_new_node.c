@@ -39,6 +39,16 @@ Node *createNode()
     }
     return head;
 }
+int count = 0;
+int totalNode(Node *q)
+{
+       while( q != NULL)
+    {
+        count++;
+        q = q->next;
+    }
+    return count;
+}
 
 Node *insertFirst( )
 {
@@ -82,6 +92,38 @@ Node *insertLast()
 
     return head;
 }
+
+Node *insert_position()
+{
+     Node *avail ;
+
+    int i = 1 , position ;
+    printf("\n\tEnter the position = ");
+    scanf("%d",&position);
+
+    if(position > count)
+    {
+        printf("\n\tInvalid Position");
+    }
+    else
+    {
+            Node *new_node = (Node*)malloc(sizeof(Node));
+
+         avail = head ;
+         while( i < position - 1)
+         {
+             avail = avail->next;
+             i++;
+         }
+           printf("\n\tEnter   Node value = ");
+          scanf("%d",&new_node->data);
+            new_node->next =  avail->next;
+            avail->next = new_node;
+    }
+
+    return head;
+}
+
 void p(Node *q)
 {
     while( q != NULL)
@@ -95,11 +137,12 @@ int main()
 {
     Node *i = createNode();
 
-    i = insertFirst();
-    p(i);
+    //i = insertFirst();
+    //p(i);
 
-    i = insertLast();
-
+    //i = insertLast();
+     totalNode(i);
+    i = insert_position();
     p(i);
 
     return 0;

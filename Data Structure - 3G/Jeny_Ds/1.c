@@ -8,13 +8,15 @@ typedef struct node
 
 } Node;
 
-Node *head, *tail;
+Node *head = NULL, *tail=NULL;
+//head = NULL;
+//tail = NULL;
 int count = 0;
 
 Node *createNode()
 {
     int n;
-    printf("\n\tEnter the value for stop (-1)\n");
+    printf("\n\tEnter the value (-1) for stop linked list \n");
     scanf("%d",&n);
 
     head = NULL;
@@ -58,7 +60,7 @@ Node *insert_position()
     Node *avail ;
 
     int i = 1, position = 1;
-    printf("\n\tEnter the position = ");
+    printf("\n\tEnter the position where insert Node = ");
     scanf("%d",&position);
 
     if(position > count)
@@ -75,7 +77,7 @@ Node *insert_position()
             avail = avail->next;
             i++;
         }
-        printf("\n\tEnter   Node value = ");
+        printf("\n\tEnter New Node value = ");
         scanf("%d",&new_node->data);
         new_node->next =  avail->next;
         avail->next = new_node;
@@ -91,14 +93,24 @@ Node *delete_position()
     printf("\n\tEnter the position where node from remove = ");
     scanf("%d",&position);
     avail = head;
-    while(i < position-1)
+
+    if(position < 0 || position > count)
     {
-        avail = avail->next;
-        i++;
+        printf("\nInvalid Position\n");
     }
-    next_node = avail->next;
-    avail->next = next_node->next;
-    free(next_node);
+    else
+    {
+        while(i < position-1)
+        {
+            avail = avail->next;
+            i++;
+        }
+        next_node = avail->next;
+        avail->next = next_node->next;
+        free(next_node);
+
+    }
+
 
     return head;
 }
@@ -119,11 +131,22 @@ int main()
     Node *i = createNode();
 
     totalNode(i);
-    i = insert_position();
-    p(i);
+    if(i == NULL)
+    {
+        printf("\nList is NULL\n");
 
-    i = delete_position();
-    p(i);
+    }
+    else
+    {
+        i = insert_position();
+
+        p(i);
+
+        i = delete_position();
+        p(i);
+    }
+
 
     return 0;
 }
+
