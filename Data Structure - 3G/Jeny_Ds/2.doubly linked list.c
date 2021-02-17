@@ -6,26 +6,19 @@ typedef struct node
     int data;
     struct node *next;
     struct node *prev;
-} Node;
+}Node;
 
-Node *head, *tail;
+Node *head = NULL , *tail = NULL;
 
-Node *createNode()
+Node *createList()
 {
-    head = NULL;
-    tail = NULL;
-
+    printf("\n\tEnter (-1) for to the stop add node in LINKED LIST\n");
     int n;
-    printf("\n\tEnter the value (-1) for stop linked list \n");
     scanf("%d",&n);
-
-    //head = NULL;
-    // tail = NULL;
 
     while(n != -1)
     {
         Node *new_node = (Node*)malloc(sizeof(Node));
-
         new_node->data = n;
         new_node->prev = NULL;
         new_node->next = NULL;
@@ -33,7 +26,8 @@ Node *createNode()
         if(head == NULL)
         {
             head = new_node;
-            tail = new_node;
+            tail = new_node ;
+
         }
         else
         {
@@ -43,26 +37,21 @@ Node *createNode()
         }
         scanf("%d",&n);
     }
-
     return head;
-
 }
-
-void p(Node *q)
+void pi(Node *a)
 {
-    while( q != NULL)
+    a = head;
+    while( a != NULL)
     {
-        printf(" %d ",q->data);
-        q = q->next;
+        printf(" %d ",a->data);
+        a = a->next;
     }
 }
-
 int main()
 {
-    Node *i = createNode();
-
-    p(i);
+    Node *c = createList();
+    pi(c);
 
     return 0;
 }
-
