@@ -1,50 +1,64 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define N 10
 
-int stack[N];
-int top = -1;
+typedef struct node
+{
+    int data;
+    struct node *link;
+
+} Node;
+
+Node *top = 0;
 
 void push()
 {
     int x;
-    printf("\n\tEnter data = ");
+    printf("\n\tEnter value = ");
     scanf("%d",&x);
 
-    if(top == N-1)
-    {
-        printf("\n\tOverflow");
-    }
-    else
-    {
-        top++;
-        stack[top] = x;
-    }
+    Node *new_node = (Node*)malloc(sizeof(Node));
+    new_node->data = x;
+    new_node->link = top;
+    top = new_node;
 }
 
 void pop()
 {
-    int item;
-    if(top == -1)
+    Node *temp ;
+    temp = top;
+    if(top == 0)
     {
         printf("\n\tUnderflow");
+
     }
     else
     {
-        item = stack[top];
-        top--;
-        printf("\n\tPopped item = %d",item);
+        printf("\n\tPopped data = %d",top->data);
+        top=top->link;
+        free(temp);
+    }
+}
+void display()
+{
+    Node *a;
+    a = top;
+
+    if(top == 0)
+    {
+        printf("\n\tStack Empty ");
+    }
+    else
+    {
+        printf("\nEnter Stack Elements = ");
+        while(a != 0)
+        {
+            printf(" %d ",a->data);
+            a = a->link;
+        }
     }
 }
 
-void display()
-{
-    int i ;
-    for(i = top ; i>=0 ; i--)
-    {
-        printf(" %d ",stack[i]);
-    }
-}
+
 
 int main()
 {
@@ -55,21 +69,21 @@ int main()
     printf("\n 4 - Exit\n");
     while(1)
     {
-         printf("\nEnter Choice = ");
+        printf("\nEnter Choice = ");
         scanf("%d",&c);
 
         switch(c)
         {
         case 1:
-          push();
+            push();
             break;
         case 2:
-           pop();
+            pop();
             break;
 
         case 3:
             display();
-            printf("\nEnter Stack Elements = ");
+
             break;
 
         case 4:

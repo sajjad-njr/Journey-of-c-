@@ -6,21 +6,17 @@ typedef struct node
     int data;
     struct node *next;
 
-} Node;
+}Node;
 
 Node *head = NULL, *tail=NULL;
-//head = NULL;
-//tail = NULL;
+
 int count = 0;
 
-Node *createNode()
+Node *createList()
 {
-    int n;
-    printf("\n\tEnter the value (-1) for stop linked list \n");
+    int n; //value
+    printf("\n\tEnter some INTEGER value for create SINGLY LINKED LIST ,and (-1) for stop linked list \n");
     scanf("%d",&n);
-
-    head = NULL;
-    tail = NULL;
 
     while(n != -1)
     {
@@ -55,7 +51,7 @@ int totalNode(Node *q)
 }
 
 
-Node *insert_position()
+Node *insertGivenposition()
 {
     Node *avail ;
 
@@ -71,18 +67,19 @@ Node *insert_position()
     else if(position == 1)
     {
         Node *new_node = (Node*)malloc(sizeof(Node));
-         printf("\n\tEnter New Node value = ");
+        printf("\n\tEnter New Node value = ");
         scanf("%d",&new_node->data);
 
         new_node->next = head;
         head = new_node;
+        count++;
     }
     else
     {
         Node *new_node = (Node*)malloc(sizeof(Node));
 
         avail = head ;
-        while( i <= position )
+        while( i < position-1 )
         {
             avail = avail->next;
             i++;
@@ -91,12 +88,13 @@ Node *insert_position()
         scanf("%d",&new_node->data);
         new_node->next =  avail->next;
         avail->next = new_node;
+        count++;
     }
 
     return head;
 }
 
-Node *delete_position()
+Node *deleteGivenPosition()
 {
     Node *avail, *next_node;
     int i = 1, position = 0;
@@ -121,13 +119,12 @@ Node *delete_position()
 
     }
 
-
     return head;
 }
 
 
-//p = print Node
-void p(Node *q)
+
+void Traverse(Node *q)
 {
     while( q != NULL)
     {
@@ -138,7 +135,7 @@ void p(Node *q)
 
 int main()
 {
-    Node *i = createNode();
+    Node *i = createList();
 
     totalNode(i);
     if(i == NULL)
@@ -148,14 +145,15 @@ int main()
     }
     else
     {
-        i = insert_position();
+        i = insertGivenposition();
+        Traverse(i);
 
-        p(i);
 
-        i = delete_position();
-        p(i);
+        i = deleteGivenPosition();
+         Traverse(i);
+
     }
-
     return 0;
 }
+
 

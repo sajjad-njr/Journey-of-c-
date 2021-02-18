@@ -9,18 +9,14 @@ typedef struct node
 } Node;
 
 Node *head = NULL, *tail=NULL;
-//head = NULL;
-//tail = NULL;
+
 int count = 0;
 
-Node *createNode()
+Node *createList()
 {
     int n;
-    printf("\n\tEnter the value (-1) for stop linked list \n");
+    printf("\n\tEnter some INTEGER value for create SINGLY LINKED LIST ,and (-1) for stop linked list \n");
     scanf("%d",&n);
-
-    head = NULL;
-    tail = NULL;
 
     while(n != -1)
     {
@@ -55,7 +51,7 @@ int totalNode(Node *q)
 }
 
 
-Node *insert_position()
+Node *insertGivenposition()
 {
     Node *avail ;
 
@@ -71,7 +67,7 @@ Node *insert_position()
     else if(position == 1)
     {
         Node *new_node = (Node*)malloc(sizeof(Node));
-         printf("\n\tEnter New Node value = ");
+        printf("\n\tEnter New Node value = ");
         scanf("%d",&new_node->data);
 
         new_node->next = head;
@@ -82,7 +78,7 @@ Node *insert_position()
         Node *new_node = (Node*)malloc(sizeof(Node));
 
         avail = head ;
-        while( i <= position )
+        while( i < position-1 )
         {
             avail = avail->next;
             i++;
@@ -96,7 +92,7 @@ Node *insert_position()
     return head;
 }
 
-Node *delete_position()
+Node *deleteGivenPosition()
 {
     Node *avail, *next_node;
     int i = 1, position = 0;
@@ -126,8 +122,8 @@ Node *delete_position()
 }
 
 
-//p = print Node
-void p(Node *q)
+
+void Traverse(Node *q)
 {
     while( q != NULL)
     {
@@ -138,24 +134,43 @@ void p(Node *q)
 
 int main()
 {
-    Node *i = createNode();
+
+    int no, ch, e;
+    printf("\n 1 -  Create  ");
+    printf("\n 2 -  Insert");
+    printf("\n 3 -  Delete");
+    printf("\n 4 - Exit");
+    printf("\nEnter choice = ");
+    //createList();
+     Node *i = createList();
 
     totalNode(i);
-    if(i == NULL)
+
+    while (1)
     {
-        printf("\nList is NULL\n");
+        printf("\n Enter choice : ");
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case 1:
+            createList();
+            break;
+        case 2:
+            i = insertGivenposition();
+            break;
+        case 3:
+            i = deleteGivenPosition();
+            break;
 
+        default:
+            printf("\nInvalid Position");
+        }
     }
-    else
-    {
-        i = insert_position();
 
-        p(i);
 
-        i = delete_position();
-        p(i);
-    }
 
     return 0;
 }
+
+
 

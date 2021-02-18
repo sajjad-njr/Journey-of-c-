@@ -40,6 +40,7 @@ void pop()
 void display()
 {
     int i ;
+     printf("\nEnter Stack Elements = ");
     for(i = top ; i>=0 ; i--)
     {
         printf(" %d ",stack[i]);
@@ -69,7 +70,7 @@ int main()
 
         case 3:
             display();
-            printf("\nEnter Stack Elements = ");
+
             break;
 
         case 4:
@@ -83,4 +84,5 @@ int main()
     }
     return 0;
 }
+
 

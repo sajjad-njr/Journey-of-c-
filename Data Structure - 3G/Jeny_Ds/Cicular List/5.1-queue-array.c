@@ -2,8 +2,9 @@
 #include<stdlib.h>
 #define N 10
 
-int stack[N];
-int top = -1;
+int queue[N];
+int  front = -1;
+int rare = -1;
 
 void push()
 {
@@ -11,65 +12,84 @@ void push()
     printf("\n\tEnter data = ");
     scanf("%d",&x);
 
-    if(top == N-1)
+    if(rare == N-1)
     {
         printf("\n\tOverflow");
     }
+    else if(front == -1 && rare == -1)
+    {
+        front = rare = 0;
+        queue[rare] = x;
+    }
     else
     {
-        top++;
-        stack[top] = x;
+        rare++;
+        queue[rare] = x;
     }
 }
 
 void pop()
 {
     int item;
-    if(top == -1)
+
+    if(front == -1 && rare == -1)
     {
         printf("\n\tUnderflow");
     }
+    else if(front == rare)
+    {
+        front = rare = -1;
+    }
     else
     {
-        item = stack[top];
-        top--;
-        printf("\n\tPopped item = %d",item);
+        printf("\n\tPopped value from Queue= %d",queue[front]);
+        front++;
     }
 }
 
 void display()
 {
     int i ;
-    for(i = top ; i>=0 ; i--)
+
+    if(front == -1 && rare == -1)
     {
-        printf(" %d ",stack[i]);
+        printf("\n\tQueue is Empty ");
     }
+    else
+    {
+         printf("\nEnter Stack Elements = ");
+        for(i = front ; i < rare+1 ; i++)
+        {
+            printf(" %d ",queue[i]);
+        }
+    }
+
 }
 
 int main()
 {
     int c ;
-    printf("\n 1 - Insert Stack");
-    printf("\n 2 - Delete  Stack");
+    printf("\n 1 - Insert Queue ");
+    printf("\n 2 - Delete Queue ");
     printf("\n 3 - Display ");
     printf("\n 4 - Exit\n");
     while(1)
     {
-         printf("\nEnter Choice = ");
+        printf("\nEnter Choice = ");
         scanf("%d",&c);
 
         switch(c)
         {
         case 1:
-          push();
+            push();
             break;
         case 2:
-           pop();
+            pop();
             break;
 
         case 3:
             display();
-            printf("\nEnter Stack Elements = ");
+
             break;
 
         case 4:
@@ -83,4 +103,6 @@ int main()
     }
     return 0;
 }
+
+
 

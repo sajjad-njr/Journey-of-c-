@@ -10,11 +10,11 @@ typedef struct node
 
 Node *head = NULL, *tail = NULL;
 
-Node *createNode()
+Node *createList()
 {
 
-    int n ;
-    printf("\n\tEnter -1 to stop the game = ");
+    int n ;//value
+    printf("\n\tEnter some INTEGER value for create SINGLY LINKED LIST ,and (-1) for stop linked list \n");
     scanf("%d",&n);
 
     while(n != -1)
@@ -40,9 +40,8 @@ Node *createNode()
     return head;
 }
 
-int countNode = 0;
-
 int count = 0;
+
 Node *totalNode(Node *a)
 {
     a = head;
@@ -104,9 +103,9 @@ Node *insertPosition()
     }
     return head;
 }
-Node *deleteNodePosition()
+Node *deletePosition()
 {
-    int position, i = 1 ;
+    int position = 0, i = 1 ;
     Node *temp ;
 
     printf("\n\tEnter the position where we want to delete = ");
@@ -123,9 +122,10 @@ Node *deleteNodePosition()
     temp->next->prev = temp->prev;
     free(temp);
 
+    return head;
 }
 
-void p(Node *a)
+void Traverse(Node *a)
 {
     a = head;
     while(a != NULL)
@@ -137,7 +137,7 @@ void p(Node *a)
 
 int main()
 {
-    Node *h = createNode();
+    Node *h = createList();
 
     h = totalNode(h);
 
@@ -148,10 +148,11 @@ int main()
     else
     {
         h = insertPosition();
-        p(h);
+        Traverse(h);
 
-        h = deleteNodePosition();
-        p(h);
+        h = deletePosition();
+       Traverse(h);
     }
     return 0;
 }
+
