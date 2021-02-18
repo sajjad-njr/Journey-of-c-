@@ -4,38 +4,44 @@
 typedef struct node
 {
     int data;
-    struct node *prev ;
-    struct node *next ;
+    struct node *prev;
+    struct node *next;
 } Node;
+
 Node *head = NULL, *tail = NULL;
 
-Node *createList()
+Node *createNode()
 {
-    printf("\n\tEnter the -1 to stop the node = ");
-    int n;
+
+    int n ;
+    printf("\n\tEnter -1 to stop the game = ");
     scanf("%d",&n);
 
     while(n != -1)
     {
-        Node *new_node = (Node*)malloc(sizeof(Node));
-        new_node->data = n;
-        new_node->prev = NULL;
-        new_node->next = NULL;
+        Node *newNode = (Node*)malloc(sizeof(Node));
+        newNode->data = n ;
+        newNode->prev = NULL;
+        newNode->next = NULL;
 
         if(head == NULL)
         {
-            head = tail = new_node;
+            head = tail = newNode;
+
         }
         else
         {
-            tail->next = new_node;
-            new_node->prev = tail;
-            tail = new_node;
+            tail->next = newNode;
+            newNode->prev = tail;
+            tail = newNode;
         }
         scanf("%d",&n);
     }
     return head;
 }
+
+int countNode = 0;
+
 int count = 0;
 Node *totalNode(Node *a)
 {
@@ -62,7 +68,8 @@ Node *insertPosition()
     new_node->prev = NULL;
     new_node->next = NULL;
 
-    Node *temp ; temp = head;
+    Node *temp ;
+    temp = head;
     if(pos< 0 || pos > count)
     {
         printf("\n\tInvalid Position");
@@ -92,26 +99,57 @@ Node *insertPosition()
         new_node->next = temp->next;
         temp->next = new_node;
         new_node->next->prev = new_node;
-
     }
     return head;
 }
-void a(Node *i)
+Node *deleteNodePosition()
 {
-    i = head;
+    int position, i = 1 ;
+    Node *temp ;
 
-    while(i != NULL)
+    printf("\n\tEnter the position where we want to delete = ");
+    scanf("%d",&position);
+
+    temp = head;
+    while( i < position)
     {
-        printf(" %d ",i->data);
-        i = i->next;
+        temp = temp->next;
+        i++;
+    }
+
+    temp->prev->next = temp->next;
+    temp->next->prev = temp->prev;
+    free(temp);
+
+}
+
+void p(Node *a)
+{
+    a = head;
+    while(a != NULL)
+    {
+        printf(" %d ",a->data);
+        a = a->next;
     }
 }
 
 int main()
 {
-    Node *r = createList();
-    r = totalNode(r);
-    r = insertPosition();
-    a(r);
+    Node *h = createNode();
+
+    h = totalNode(h);
+
+    if(h == NULL)
+    {
+        printf("\nThe List is Empty ");
+    }
+    else
+    {
+        h = insertPosition();
+        p(h);
+
+        h = deleteNodePosition();
+        p(h);
+    }
     return 0;
 }
