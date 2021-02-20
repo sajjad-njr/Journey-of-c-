@@ -23,6 +23,7 @@ Node *circular()
         if(head == NULL)
         {
             head = tail = new_node;
+
         }
         else
         {
@@ -35,7 +36,30 @@ Node *circular()
     }
     return head;
 }
-void start()
+Node *start()
+{
+    Node *newNode = (Node*)malloc(sizeof(Node));
+
+    printf("Enter the value of Node = ");
+    scanf("%d",&newNode->data);
+    newNode->next = NULL;
+
+    if(tail == NULL)
+    {
+        tail = newNode;
+        tail->next = newNode;
+    }
+    else
+    {
+        newNode->next = head;
+        tail->next = newNode;
+        head = newNode;
+    }
+
+    return head;
+}
+
+Node *end()
 {
     Node *newNode = (Node*)malloc(sizeof(Node));
 
@@ -52,9 +76,10 @@ void start()
     {
         newNode->next = tail->next;
         tail->next = newNode;
+        tail = newNode;
     }
 
-    //return tail;
+    return head;
 }
 void p()
 {
@@ -81,7 +106,8 @@ void p()
 int main()
 {
     Node *y = circular();
-     start();
+     y = start();
+     y = end();
     p();
     return 0;
 }

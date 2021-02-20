@@ -8,8 +8,40 @@ typedef struct node
 
 } Node;
 
+Node *createNode();
+int totalNode(Node *q);
+Node *insert_position();
+Node *delete_position();
+Node *delete_position();
+void p(Node *q);
+
 Node *head = NULL, *tail=NULL;
 int count = 0;
+
+int main()
+{
+    Node *i = createNode();
+
+    totalNode(i);
+    if(i == NULL)
+    {
+        printf("\nList is NULL\n");
+
+    }
+    else
+    {
+        i = insert_position();
+
+        p(i);
+
+        i = delete_position();
+        p(i);
+    }
+
+    return 0;
+}
+
+
 
 Node *createNode()
 {
@@ -66,7 +98,7 @@ Node *insert_position()
         printf("\n\tInvalid Position");
     }
 
-    else if(position == 0)
+    else if(position == 1)
     {
         Node *new_node = (Node*)malloc(sizeof(Node));
          printf("\n\tEnter New Node value = ");
@@ -143,26 +175,5 @@ void p(Node *q)
     }
 }
 
-int main()
-{
-    Node *i = createNode();
 
-    totalNode(i);
-    if(i == NULL)
-    {
-        printf("\nList is NULL\n");
-
-    }
-    else
-    {
-        i = insert_position();
-
-        p(i);
-
-        i = delete_position();
-        p(i);
-    }
-
-    return 0;
-}
 

@@ -6,23 +6,47 @@ typedef struct node
     int data;
     struct node *next;
 
-}Node;
+} Node;
+
+Node *createList();
+int totalNode(Node *avail);
+Node *insertGivenPosition();
+Node *deleteGivenPosition();
+void Traverse(Node *avail);
 
 Node *head = NULL, *tail=NULL;
-
 int count = 0;
+
+int main()
+{
+    Node *avail = createList();
+
+    totalNode(avail);
+    if(avail == NULL)
+    {
+        printf("\nList is NULL\n");
+    }
+    else
+    {
+        avail = insertGivenPosition();
+        Traverse(avail);
+        avail = deleteGivenPosition();
+        Traverse(avail);
+    }
+    return 0;
+}
 
 Node *createList()
 {
-    int n; //value
+    int value;
     printf("\n\tEnter some INTEGER value for create SINGLY LINKED LIST ,and (-1) for stop linked list \n");
-    scanf("%d",&n);
+    scanf("%d",&value);
 
-    while(n != -1)
+    while(value != -1)
     {
         Node *new_node = (Node*) malloc(sizeof(Node));
 
-        new_node->data = n;
+        new_node->data = value;
         new_node->next = NULL;
 
         if(head == NULL)
@@ -35,23 +59,22 @@ Node *createList()
             tail->next = new_node;
             tail = new_node;
         }
-        scanf("%d",&n);
+        scanf("%d",&value);
     }
     return head;
 }
 
-int totalNode(Node *q)
+int totalNode(Node *avail)
 {
-    while( q != NULL)
+    while( avail != NULL)
     {
         count++;
-        q = q->next;
+        avail = avail->next;
     }
     return count;
 }
 
-
-Node *insertGivenposition()
+Node *insertGivenPosition()
 {
     Node *avail ;
 
@@ -104,7 +127,13 @@ Node *deleteGivenPosition()
 
     if(position < 0 || position > count)
     {
-        printf("\nInvalid Position\n");
+        printf("\n\tInvalid Position\n");
+        printf("\n\tPrevious Node value = ");
+    }
+    else if(position == 1)
+    {
+        head = head->next;
+        free(avail);
     }
     else
     {
@@ -116,44 +145,19 @@ Node *deleteGivenPosition()
         next_node = avail->next;
         avail->next = next_node->next;
         free(next_node);
-
     }
 
     return head;
 }
 
-
-
-void Traverse(Node *q)
+void Traverse(Node *avail)
 {
-    while( q != NULL)
+    while( avail != NULL)
     {
-        printf(" %d ",q->data);
-        q = q->next;
+        printf(" %d ",avail->data);
+        avail = avail->next;
     }
 }
 
-int main()
-{
-    Node *i = createList();
-
-    totalNode(i);
-    if(i == NULL)
-    {
-        printf("\nList is NULL\n");
-
-    }
-    else
-    {
-        i = insertGivenposition();
-        Traverse(i);
-
-
-        i = deleteGivenPosition();
-         Traverse(i);
-
-    }
-    return 0;
-}
 
 

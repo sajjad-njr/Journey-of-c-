@@ -1,13 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define N 10
+#define MAX 10
 
-int stack[N];
+int stack[MAX];
 int top = -1;
+//insert_stack();
 
-void push()
+void StackPush()
 {
-    int x;
+    int x;//data
     printf("\n\tEnter data = ");
     scanf("%d",&x);
 
@@ -22,7 +23,7 @@ void push()
     }
 }
 
-void pop()
+void StackPop()
 {
     int item;
     if(top == -1)
@@ -37,11 +38,11 @@ void pop()
     }
 }
 
-void display()
+void  Traversal()
 {
     int i ;
-     printf("\nEnter Stack Elements = ");
-    for(i = top ; i>=0 ; i--)
+    printf("\nEnter Stack Elements = ");
+    for(i = top ; i>= 0 ; i--)
     {
         printf(" %d ",stack[i]);
     }
@@ -49,37 +50,35 @@ void display()
 
 int main()
 {
-    int c ;
-    printf("\n 1 - Insert Stack");
-    printf("\n 2 - Delete  Stack");
-    printf("\n 3 - Display ");
-    printf("\n 4 - Exit\n");
+    int c ;//value
+    printf("\n 1 - Insert Stack ");
+    printf("\n 2 - Delete Stack ");
+    printf("\n 3 - Traversal ");
+    printf("\n 4 - Exit ");
     while(1)
     {
-         printf("\nEnter Choice = ");
+        printf("\nEnter Choice = ");
         scanf("%d",&c);
 
         switch(c)
         {
         case 1:
-          push();
+           StackPush();
+             Traversal();
             break;
         case 2:
-           pop();
+          StackPop();
             break;
-
         case 3:
-            display();
-
+           Traversal();
             break;
-
         case 4:
             printf("The Program is Over.\n");
             exit(0);
             break;
 
         default:
-            printf("Invalid choice, please try again.\n");
+            printf("Invalid choice, Enter Btween 1 to 4.\n");
         }
     }
     return 0;

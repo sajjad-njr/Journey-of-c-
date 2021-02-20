@@ -8,26 +8,52 @@ typedef struct node
     struct node *next;
 } Node;
 
+Node *createList();
+Node *totalNode(Node *avail);
+Node *insertPosition();
+Node *deletePosition();
+void Traverse(Node *avail);
+
 Node *head = NULL, *tail = NULL;
+int count = 0;
+
+int main()
+{
+    Node *avail = createList();
+
+    avail = totalNode(avail);
+
+    if(avail == NULL)
+    {
+        printf("\nThe List is Empty ");
+    }
+    else
+    {
+        avail = insertPosition();
+        Traverse(avail);
+
+        avail = deletePosition();
+        Traverse(avail);
+    }
+    return 0;
+}
 
 Node *createList()
 {
+    int value;
+    printf("\n\tEnter some INTEGER values for create DOUBLY LINKED LIST ,and (-1) for stop linked list \n");
+    scanf("%d",&value);
 
-    int n ;//value
-    printf("\n\tEnter some INTEGER value for create SINGLY LINKED LIST ,and (-1) for stop linked list \n");
-    scanf("%d",&n);
-
-    while(n != -1)
+    while(value != -1)
     {
         Node *newNode = (Node*)malloc(sizeof(Node));
-        newNode->data = n ;
+        newNode->data =value ;
         newNode->prev = NULL;
         newNode->next = NULL;
 
         if(head == NULL)
         {
             head = tail = newNode;
-
         }
         else
         {
@@ -35,46 +61,43 @@ Node *createList()
             newNode->prev = tail;
             tail = newNode;
         }
-        scanf("%d",&n);
+        scanf("%d",&value);
     }
     return head;
 }
 
-int count = 0;
-
-Node *totalNode(Node *a)
+Node *totalNode(Node *avail)
 {
-    a = head;
-
-    while(a != NULL)
+    avail = head;
+    while(avail != NULL)
     {
         count++;
-        a = a->next;
+        avail = avail->next;
     }
     printf("\n\tTotal Node in the list = %d",count);
-    //return count ;
 }
 Node *insertPosition()
 {
-    int pos;
+    int position;
     printf("\n\tEnter the position where insert new node = ");
-    scanf("%d",&pos);
+    scanf("%d",&position);
 
     Node *new_node = (Node*)malloc(sizeof(Node));
-    printf("\n\tEnter node value = ");
-    scanf("%d",&new_node->data);
-
-    new_node->prev = NULL;
-    new_node->next = NULL;
 
     Node *temp ;
     temp = head;
-    if(pos< 0 || pos > count)
+    if(position< 0 || position > count)
     {
         printf("\n\tInvalid Position");
     }
-    else if (pos == 1)
+    else if (position == 1)
     {
+        printf("\n\tEnter node value = ");
+        scanf("%d",&new_node->data);
+
+        new_node->prev = NULL;
+        new_node->next = NULL;
+
         if(head == NULL)
         {
             head = tail =  new_node;
@@ -90,8 +113,10 @@ Node *insertPosition()
     }
     else
     {
+        printf("\n\tEnter node value = ");
+        scanf("%d",&new_node->data);
         int i = 1 ;
-        while (i < pos-1)
+        while (i < position-1)
         {
             temp = temp->next;
             i++;
@@ -100,59 +125,55 @@ Node *insertPosition()
         new_node->next = temp->next;
         temp->next = new_node;
         new_node->next->prev = new_node;
+        count++;
     }
     return head;
 }
 Node *deletePosition()
 {
     int position = 0, i = 1 ;
-    Node *temp ;
+    Node *avail ;
 
     printf("\n\tEnter the position where we want to delete = ");
     scanf("%d",&position);
 
-    temp = head;
-    while( i < position)
+    if(position < 0 || position > count)
     {
-        temp = temp->next;
-        i++;
+        printf("\n\tInvalid Position ");
+        printf("\n\tPrevious Node value = ");
     }
+    else if(position == 1)
+    {
+        avail = head;
+        head = head->next;
+        head->prev = NULL;
+        free(avail);
 
-    temp->prev->next = temp->next;
-    temp->next->prev = temp->prev;
-    free(temp);
+    }
+    else
+    {
+        avail = head;
+        while( i < position)
+        {
+            avail = avail->next;
+            i++;
+        }
+
+        avail->prev->next = avail->next;
+        avail->next->prev = avail->prev;
+        free(avail);
+    }
 
     return head;
 }
 
-void Traverse(Node *a)
+void Traverse(Node *avail)
 {
-    a = head;
-    while(a != NULL)
+    avail = head;
+    while(avail != NULL)
     {
-        printf(" %d ",a->data);
-        a = a->next;
+        printf(" %d ",avail->data);
+        avail = avail->next;
     }
-}
-
-int main()
-{
-    Node *h = createList();
-
-    h = totalNode(h);
-
-    if(h == NULL)
-    {
-        printf("\nThe List is Empty ");
-    }
-    else
-    {
-        h = insertPosition();
-        Traverse(h);
-
-        h = deletePosition();
-       Traverse(h);
-    }
-    return 0;
 }
 
