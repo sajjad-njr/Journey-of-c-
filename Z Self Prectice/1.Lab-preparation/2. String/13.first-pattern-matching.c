@@ -14,13 +14,13 @@ int main()
     str1_len = strlen(str1);
     str2_len = strlen(str2);
 
-    Max = str1_len - str2_len;
+    Max = str1_len - str2_len + 1 ;
 
     while( k <= Max)
     {
-        for( l = 0 ; l < str1_len ; l++)
+        for( l = 0 ; l < str2_len ; l++)
         {
-           if(str2[l] != str1[k + l - 1])
+           if(str2[l] != str1[k + l ])
             {
                 k++;
                 break;

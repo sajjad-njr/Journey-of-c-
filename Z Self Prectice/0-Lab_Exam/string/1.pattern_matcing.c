@@ -15,7 +15,7 @@ int main()
     len1 = strlen(str1);
     printf("\nstring len = %d",len1);
     len2 = strlen(str2);
-    max = len1 - len2;
+    max = len1 - len2 + 1;
 
     while(k <= max)
     {
