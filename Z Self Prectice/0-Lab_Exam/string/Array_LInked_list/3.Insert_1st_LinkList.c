@@ -39,7 +39,7 @@ Node *createNode()
 Node *inserFirst()
 {
     int value;
-    printf("\n\tEnter the new NODE value that want to first position = ");
+    printf("\n\tEnter the new NODE value that want to insert first position = ");
     scanf("%d",&value);
 
     Node *newNode = (Node*)malloc(sizeof(Node));
