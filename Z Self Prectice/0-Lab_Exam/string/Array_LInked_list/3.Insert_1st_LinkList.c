@@ -72,8 +72,9 @@ int main()
 {
     Node *j = createNode();
     outPut(j);
+
     j = inserFirst();
-      outPut(j);
+    outPut(j);
 
     return 0;
 }
