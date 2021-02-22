@@ -51,6 +51,5 @@ int main()
 {
     Node *i = creteNode();
     p(i);
-
     return 0;
 }

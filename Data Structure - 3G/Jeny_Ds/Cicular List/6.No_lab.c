@@ -113,23 +113,23 @@ void linear_nonrecursive(int array[],int num,int element)
 /* Non-Recursive function*/
 void binary_nonrecursive(int array[],int num,int element)
 {
-   int l1,i,j, flag = 0;
+   int l1,high,mid, flag = 0;
    l1 = 0;
-   i = num-1;
-   while(l1 <= i)
+   high = num-1;
+   while(l1 <= high)
    {
-      j = (l1+i)/2;
-      if( array[j] == element)
+      mid = (l1+high)/2;
+      if( array[mid] == element)
       {
-    printf("\nThe element %d is present at position %d in list\n",element,j+1);
+    printf("\nThe element %d is present at position %d in list\n",element,mid+1);
          flag =1;
          break;
       }
       else
-        if(array[j] < element)
-           l1 = j+1;
+        if(array[mid] < element)
+           l1 = mid+1;
         else
-           i = j-1;
+           high = mid-1;
    }
    if( flag == 0)
    printf("\nThe element %d is not present in the list\n",element);
