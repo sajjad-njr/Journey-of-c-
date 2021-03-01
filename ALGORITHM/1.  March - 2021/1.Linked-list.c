@@ -26,8 +26,29 @@ Node *createNode()
         }
         else
         {
-
+            tail->next = newNode;
+            tail = newNode;
         }
+        scanf("%d",&n);
     }
+    return head ;
+}
+
+void p(Node *a)
+{
+    a = head;
+    while(a != NULL)
+    {
+        printf(" %d ",a->data);
+        a = a->next;
+    }
+}
+
+int main()
+{
+    Node *s = createNode();
+    p(s);
+
+    return 0;
 }
 
